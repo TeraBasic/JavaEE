@@ -1,0 +1,8 @@
+@GetMapping(value = "/login/{name}&{pwd}")
+	public String login2(@PathVariable String name, @PathVariable String pwd) {
+		if (name.equals("admin") && pwd.equals("admin")) {
+			return "hello welcome admin";
+		} else {
+			return "oh sorry user name or password is wrong";
+		}
+	}

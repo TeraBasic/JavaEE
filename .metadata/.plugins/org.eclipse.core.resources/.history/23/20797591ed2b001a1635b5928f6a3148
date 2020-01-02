@@ -1,0 +1,19 @@
+package com.example.demoSQL.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demoSQL.domain.UserDo;
+
+@Service
+public class LogInService {
+	@Autowired
+    private UserDao userDao;
+	
+	public boolean validateUser(String name, String password) {
+		UserDo userDo = userDao.findByAccount("name");
+		return userDo.getPwd().equals(password);
+		
+	}
+
+}

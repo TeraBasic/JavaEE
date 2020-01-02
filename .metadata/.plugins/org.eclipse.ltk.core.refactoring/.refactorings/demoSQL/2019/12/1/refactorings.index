@@ -1,0 +1,23 @@
+1577723632493	Rename type 'DemoSqlApplication'
+1577723640263	Rename type 'DemoSqlApplicationTests'
+1577740654992	Rename package 'com.example.demoSQL.web'
+1577740809059	Delete element
+1577740814272	Delete element
+1577740855228	Rename package 'com.example.demoSQL.controller'
+1577740881105	Delete element
+1577744355661	Rename type 'LogIn'
+1577744602399	Rename package 'com.example.demoSQL.login'
+1577745103291	Delete element
+1577746130375	Copy file
+1577799986162	Rename compilation unit 'UserDo.java'
+1577801212306	Rename type 'User'
+1577803085988	Delete element
+1577803386313	Copy file
+1577803611841	Delete element
+1577804225340	Copy file
+1577804236120	Delete element
+1577804326726	Rename resource 'jap'
+1577804658054	Move 'webapp' to 'resources'
+1577804893234	Move 'webapp' to 'main'
+1577805080873	Rename type 'LearnResouce'
+1577811445982	Delete element

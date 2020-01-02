@@ -1,0 +1,12 @@
+package com.example.demoSQL.service;
+
+
+@Service
+public class LogInService {
+
+	public boolean validateUser(String name, String password) {
+		return name.equalsIgnoreCase("in28minutes")
+                && password.equalsIgnoreCase("dummy");
+	}
+
+}
