@@ -11,3 +11,5 @@ import com.example.demoSQL.domain.UserDo;
 public interface UserDao extends JpaRepository<UserDo, Long> {
 	//UserDo findByAccount(String string);
 }
+
+
