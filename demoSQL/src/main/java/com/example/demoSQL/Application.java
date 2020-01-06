@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demoSQL.domain.ServiceProDoYi;
+import com.example.demoSQL.domain.ServiceProDo;
 import com.example.demoSQL.domain.UserDo;
-import com.example.demoSQL.service.ServiceDaoYi;
+import com.example.demoSQL.service.ServiceProDao;
 import com.example.demoSQL.service.UserDao;
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ public class Application {
 	@Autowired
     private UserDao userDao;
 	@Autowired
-	private ServiceDaoYi serviceDao;
+	private ServiceProDao serviceDao;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -51,40 +51,49 @@ public class Application {
    }
 	@RequestMapping(value = "/service")
 	public String creatServiceP() {
-		ServiceProDoYi serviceP = new ServiceProDoYi();
+		ServiceProDo serviceP = new ServiceProDo();
 		serviceP.setCompteId(10001L);
 		serviceP.setnomService("Netoyer la toilette");
 		serviceP.setTypeService("Service a offirir");
+		serviceP.setReference("reference 00001");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
 		serviceP.setEtatService("A valider");
 		String dateString = "2020-01-23"; 
 	    Date date=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date);
+		serviceP.setDescription("This is the first serviece");
+		serviceP.setDescriptionDetail("This is the first serviece detail ");
 		serviceDao.save(serviceP);
 		
-		serviceP = new ServiceProDoYi();
+		serviceP = new ServiceProDo();
 		serviceP.setCompteId(10002L);
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
+		serviceP.setReference("reference 00002");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
 		serviceP.setEtatService("A valider");
 		String dateString2 = "2020-02-24"; 
 	    Date date2=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date2);
+		serviceP.setDescription("This is the 2 serviece");
+		serviceP.setDescriptionDetail("This is the 2 serviece detail ");
 		serviceDao.save(serviceP);
 		
-		serviceP = new ServiceProDoYi();
+		serviceP = new ServiceProDo();
 		serviceP.setCompteId(10003L);
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
+		serviceP.setReference("reference 00003");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
 		serviceP.setEtatService("A valider");
 		String dateString3 = "2020-03-24"; 
 	    Date date3=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date3);
+		serviceP.setDescription("This is the 3 serviece");
+		serviceP.setDescriptionDetail("This is the 3 serviece detail ");
 		serviceDao.save(serviceP);
 		
 		

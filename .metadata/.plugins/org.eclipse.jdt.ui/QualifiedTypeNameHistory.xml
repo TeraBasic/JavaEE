@@ -30,4 +30,8 @@
 <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.service.ServiceDaoYi"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.ServiceProDoYi"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 </qualifiedTypeNameHistroy>
