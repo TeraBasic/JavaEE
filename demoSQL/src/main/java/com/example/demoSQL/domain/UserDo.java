@@ -15,43 +15,83 @@ import javax.persistence.Table;
 @Table(name = "AUTH_USER")
 public class UserDo {
     @Id
-    private Long id;
+    private String username;
     @Column(length = 32)
-    private String name;
+    private String username1;
     @Column(length = 32)
-    private String account;
-    @Column(length = 64)
-    private String pwd;
+    private String usersurname;
+    @Column(length = 32)
+    private String userpseudonym;
+    @Column(length = 32)
+    private String useraddress;
+    @Column(length = 32)
+    private Long userphone;
+    @Column(length = 32)
+    private String userinfo;
+    @Column(length = 32)
+    private String password;
 
-    public Long getId() {
-        return id;
+    public String getusername() {
+        return username;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setusername(String username) {
+        this.username = username;
     }
 
-    public String getName() {
-        return name;
+    public String getusername1() {
+        return username1;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setusername1(String username1) {
+        this.username1 = username1;
     }
 
-    public String getAccount() {
-        return account;
+    public String getusersurname() {
+        return usersurname;
     }
 
-    public void setAccount(String account) {
-        this.account = account;
+    public void setusersurname(String usersurname) {
+        this.usersurname = usersurname;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getuserpseudonym() {
+        return userpseudonym;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setuserpseudonym(String userpseudonym) {
+        this.userpseudonym = userpseudonym;
+    }
+
+    public String getuseraddress() {
+        return useraddress;
+    }
+    
+    public void setuseraddress(String useraddress) {
+        this.useraddress = useraddress;
+    }
+
+     public Long getuserphone() {
+        return userphone;
+    }
+
+    public void setuserphone(Long userphone) {
+        this.userphone = userphone;
+    }
+
+     public String getuserinfo() {
+        return userinfo;
+    }
+
+    public void setuserinfo(String userinfo) {
+        this.userinfo = userinfo;
+    }
+
+    public String getpassword() {
+        return password;
+    }
+
+    public void setpassword(String password) {
+        this.password = password;
     }
 }
