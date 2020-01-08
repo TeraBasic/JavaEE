@@ -1,40 +1,36 @@
-
-<!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-</style>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body style="background-image: none;">
-<div class="body_wrap">
-    <div class="container">
-        <div class="alert alert-success text-center" role="alert"> Service proposition</div>
-        <table class="table table-striped table-bordered">
-            <tr>
-                <td>Référence</td>
-                <td>Type</td>
-                <td>Nature</td>
-                <td>Description courte</td>
-            </tr>
-            <c:forEach var="service" items="${serviceProList}">
-                <tr class="text-info">
-                    <td>${service.reference}</td>
-                    <td>${service.typeService}</td>
-                    <td>${service.natureService}</td>
-                    <td>${service.description}</td>
-                </tr>
-            </c:forEach>
-        </table>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'Feilong_index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  </head>
+  <body>
+    <center>
+    <font face = "宋体" size = "6" color = "#000">Bienvenue</font><hr>
+    <div>
+        <img alt="" width = "600" height = "400" src="C:\Downloads\Images\1.jpg">
     </div>
-</div>
-</body>
+    <table width = "200" border ="1" bordercolor = "#00F">
+        <tr>
+          <td><input type = "button" value = "        login            " onclick = "window.location.href('login.jsp')"></td>
+          <td><input type = "button" value = "    s'inscrire       " onclick = "window.open('register.jsp')"></td>
+        </tr> 
+    </table>
+  </center>
+  </body>
 </html>
