@@ -7758,3 +7758,258 @@ org.eclipse.jface.text.BadPartitioningException
 	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo(PropertiesFileHover.java:135)
 	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo2(PropertiesFileHover.java:108)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-07 13:28:14.078
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rQTNuGjC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-07 13:28:14.083
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.rQTNuGjC
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-07 13:28:14.085
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-07 13:28:14.086
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rQTNuGjC => OK
+!SESSION 2020-01-22 14:37:12.494 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/utilisateur/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/utilisateur/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-01-22 14:37:21.618
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2020-01-22 14:37:24.504
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-22 14:37:24.504
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@136690b1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39007725,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-22 14:37:24.504
+!MESSAGE A conflict occurred for COMMAND+SHIFT+F10:
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.jboss.tools.common.ui.RegisterAsService,Register As Service,
+		Adds class name to META-INF/services/%serviceType% file after service type is selected in the dialog from types extended and implemented by the class.,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3eb8057c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.eclipse.ui.window.showSystemMenu,Show System Menu,
+		Show the system menu,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@be186df,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.ui 2 2 2020-01-22 14:42:43.861
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:54.643
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:54.645
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7dfefd73[org.springframework.tooling.boot.ls:1.14.0.201912170939(id=1115)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:54.650
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:54.817
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.315
+!MESSAGE Boot LS startup time from start to initialized: 4587ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.376
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZuHJETDyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.405
+!MESSAGE subscribing to classpath changes: sts4.classpath.ZuHJETDy isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.409
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.418
+!MESSAGE subsribers = {sts4.classpath.ZuHJETDy=Send Classpath Notifications(1169)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.419
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.419
+!MESSAGE project demoSQL ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.420
+!MESSAGE project AppClientTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.422
+!MESSAGE project BanqueTestWeb ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.422
+!MESSAGE project HelloWorld ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.423
+!MESSAGE project HelloWorld SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.424
+!MESSAGE project JSF-EJB-JPA-Crud-Example ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.425
+!MESSAGE project JSF-EJB-JPA-Crud-Example SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.425
+!MESSAGE project JSFTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.426
+!MESSAGE project Leetcode ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.426
+!MESSAGE Preparing classpath changed notification demoSQL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.428
+!MESSAGE project first-maven ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.428
+!MESSAGE project first-maven SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.429
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.430
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.431
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZuHJETDy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.458
+!MESSAGE classpath=116 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.461
+!MESSAGE buffering callback sts4.classpath.ZuHJETDy demoSQL false 116
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.462
+!MESSAGE Preparing classpath changed notification AppClientTest
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.464
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.465
+!MESSAGE classpath=66 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.467
+!MESSAGE buffering callback sts4.classpath.ZuHJETDy AppClientTest false 66
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.468
+!MESSAGE Preparing classpath changed notification BanqueTestWeb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.469
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.470
+!MESSAGE classpath=65 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.472
+!MESSAGE buffering callback sts4.classpath.ZuHJETDy BanqueTestWeb false 65
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.473
+!MESSAGE Preparing classpath changed notification JSFTest
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.474
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.475
+!MESSAGE classpath=65 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.477
+!MESSAGE buffering callback sts4.classpath.ZuHJETDy JSFTest false 65
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.478
+!MESSAGE Preparing classpath changed notification Leetcode
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.479
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.482
+!MESSAGE classpath=18 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.486
+!MESSAGE buffering callback sts4.classpath.ZuHJETDy Leetcode false 18
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.490
+!MESSAGE executing callback sts4.classpath.ZuHJETDy 5 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-22 14:42:59.595
+!MESSAGE executing callback sts4.classpath.ZuHJETDy SUCCESS [done]
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2020-01-23 19:23:38.024
+!MESSAGE can not get a buffer without a document reference
+!STACK 0
+java.lang.IllegalArgumentException: can not get a buffer without a document reference
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:691)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3276)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3383)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:265)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:149)
+	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:139)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob$1.run(AbstractIndexManager.java:1561)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1559)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.sse.core 4 4 2020-01-23 19:24:47.215
+!MESSAGE can not get a buffer without a document reference
+!STACK 0
+java.lang.IllegalArgumentException: can not get a buffer without a document reference
+	at org.eclipse.wst.sse.core.internal.FileBufferModelManager.getBuffer(FileBufferModelManager.java:691)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.getModelPath(JSPTranslator.java:3276)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslator.writeExternal(JSPTranslator.java:3383)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslator(JSPTranslatorPersister.java:265)
+	at org.eclipse.jst.jsp.core.internal.java.JSPTranslatorPersister.persistTranslation(JSPTranslatorPersister.java:149)
+	at org.eclipse.jst.jsp.core.internal.java.search.JSPIndexManager.performAction(JSPIndexManager.java:139)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob$1.run(AbstractIndexManager.java:1561)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.core.indexing.AbstractIndexManager$ResourceEventProcessingJob.run(AbstractIndexManager.java:1559)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-01-24 15:45:12.052
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.jface.text.BadPartitioningException
+	at org.eclipse.jface.text.AbstractDocument.getPartition(AbstractDocument.java:1392)
+	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo(PropertiesFileHover.java:135)
+	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo2(PropertiesFileHover.java:108)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-01-24 15:46:00.789
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.jface.text.BadPartitioningException
+	at org.eclipse.jface.text.AbstractDocument.getPartition(AbstractDocument.java:1392)
+	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo(PropertiesFileHover.java:135)
+	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo2(PropertiesFileHover.java:108)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)

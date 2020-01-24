@@ -8,25 +8,25 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.demoSQL.domain.ServiceProDo;
-import com.example.demoSQL.service.ServiceProService;
+import com.example.demoSQL.domain.OfferDo_Y;
+import com.example.demoSQL.service.OfferService_Y;
 
 @Controller
 @RequestMapping("/servicePro")
 public class ServiceProController {
 	@Autowired
-	private ServiceProService serviceProService;
+	private OfferService_Y offerService_Y;
 	
 	@RequestMapping(value="", method = RequestMethod.GET)
     public String showLoginPage(ModelMap model){
-		List<ServiceProDo> serviceList = this.serviceProService.getAllService();
+		List<OfferDo_Y> serviceList = this.offerService_Y.getAllService();
         model.put("serviceProList", serviceList);
-        for (ServiceProDo e : serviceList) {
+        for (OfferDo_Y e : serviceList) {
         	System.out.println(e.getnomService());
         	System.out.println(e.getDescription());
         	
         }
-		return "index";
+		return "showService";
     }
 
 }

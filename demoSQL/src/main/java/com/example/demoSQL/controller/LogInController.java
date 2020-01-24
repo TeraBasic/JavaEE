@@ -21,26 +21,20 @@ public class LogInController {
         return "login";
     }
 
-    @RequestMapping(value="/register", method = RequestMethod.POST)
-    public String showWelcomePage(ModelMap model, @RequestParam String username, @RequestParam String password){
+    @RequestMapping(value="", method = RequestMethod.POST)
+    public String showWelcomePage(ModelMap model, @RequestParam String id, @RequestParam String password){
 
-        boolean isValidUser = service.validateUser(username, password);
+        boolean isValidUser = service.validateUser(id, password);
 
         if (!isValidUser) {
             model.put("errorMessage", "Invalid Credentials");
             return "login";
         }
 
-        model.put("username", username);
+        model.put("username", id);
         model.put("password", password);
 
-        return "welcome";
-        
-         @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public String logout(HttpSession session) {
-        session.removeAttribute("user");
-        return "login";
-    }
+        return "successLogin";
     }
 
 }

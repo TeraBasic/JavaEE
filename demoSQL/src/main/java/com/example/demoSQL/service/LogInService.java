@@ -1,6 +1,12 @@
 package com.example.demoSQL.service;
 
 import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demoSQL.domain.UserDo;
@@ -9,27 +15,15 @@ import com.example.demoSQL.domain.UserDo;
 public class LogInService {
 	@Autowired
     private UserDao userDao;
+	@PersistenceContext
+    private EntityManager entityManager;
+
 	
-	public String  register(User user) {
-        if (userDao.getOneUser(user.getUsername()) == null) {
-            userDao.setOneUser(user);
-            return True;
-        }
-        else {
-            return False;
-        }
-    }
-	
-	public boolean validateUser(String username, String password) {
-		UserDo userDo = userDao.getOne(username);
-		if (dbUser == null) {
-            return False;
-        }
-		return userDo.getPwd().equals(password);
-		user.setusername(dbUser.getId());
-            user.setCreateTime(userDo.getCreateTime());
-            return "Login success";
-		
+	public boolean validateUser(String id, String password) {
+		//UserDo userDo = userDao.getOne(id);
+		UserDo userDo = entityManager.find(UserDo.class, id);
+		return userDo.getPassWord().equals(password);
+		//return true;
 	}
 
 }

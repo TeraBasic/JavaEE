@@ -2,8 +2,11 @@ package com.example.demoSQL.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  * 
@@ -14,84 +17,74 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "AUTH_USER")
 public class UserDo {
-    @Id
-    private String username;
-    @Column(length = 32)
-    private String username1;
-    @Column(length = 32)
-    private String usersurname;
-    @Column(length = 32)
-    private String userpseudonym;
-    @Column(length = 32)
-    private String useraddress;
-    @Column(length = 32)
-    private Long userphone;
-    @Column(length = 32)
-    private String userinfo;
+	@Id
+	@Column(name = "USER_ID",unique=true,columnDefinition="VARCHAR(64)")
+	private String userId;
+    
     @Column(length = 32)
     private String password;
-
-    public String getusername() {
-        return username;
-    }
-
-    public void setusername(String username) {
-        this.username = username;
-    }
-
-    public String getusername1() {
-        return username1;
-    }
-
-    public void setusername1(String username1) {
-        this.username1 = username1;
-    }
-
-    public String getusersurname() {
-        return usersurname;
-    }
-
-    public void setusersurname(String usersurname) {
-        this.usersurname = usersurname;
-    }
-
-    public String getuserpseudonym() {
-        return userpseudonym;
-    }
-
-    public void setuserpseudonym(String userpseudonym) {
-        this.userpseudonym = userpseudonym;
-    }
-
-    public String getuseraddress() {
-        return useraddress;
-    }
+    @Column(length = 32)
+    private String nom;
+    @Column(length = 32)
+    private String prenom;
+    @Column(length = 32)
+    private String pseudonyme;
+    @Column(length = 32)
+    private String adresse;
+    @Column(length = 32)
+    private String telephone;
+    @Column(length = 32)
+    private String description;
     
-    public void setuseraddress(String useraddress) {
-        this.useraddress = useraddress;
+    public String getId() {
+    	return this.userId;
     }
-
-     public Long getuserphone() {
-        return userphone;
+    public void setId(String id) {
+    	this.userId=id;
     }
-
-    public void setuserphone(Long userphone) {
-        this.userphone = userphone;
+    public String getPassWord() {
+    	return this.password;
     }
-
-     public String getuserinfo() {
-        return userinfo;
+    public void setPassWord(String pass) {
+    	this.password = pass;
     }
-
-    public void setuserinfo(String userinfo) {
-        this.userinfo = userinfo;
+    public String getNom() {
+    	return this.nom;
     }
-
-    public String getpassword() {
-        return password;
+    public void setNom(String nom) {
+    	this.nom = nom;
     }
-
-    public void setpassword(String password) {
-        this.password = password;
+    public String getPrenom() {
+    	return this.prenom;
     }
+    public void setPrenom(String prenom) {
+    	this.prenom = prenom;
+    }
+    public String getPseudonyme() {
+    	return this.pseudonyme;
+    }
+    public void setPseudonyme(String pseu) {
+    	this.pseudonyme = pseu;
+    }
+    public String getDdresse() {
+    	return this.adresse;
+    }
+    public void setAddresse(String add) {
+    	this.adresse = add;
+    }
+    public String getTelephone() {
+    	return this.telephone;
+    }
+    public void setTelephone(String tele) {
+    	this.telephone = tele;
+    }
+    public String getDescription() {
+    	return this.description;
+    }
+    public void setDescription(String des) {
+    	this.description = des;
+    	
+    }
+   
+    
 }
