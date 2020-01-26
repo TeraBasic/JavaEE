@@ -7,7 +7,7 @@
 	<center>
     <p> Demande Service </p>
     <p> Welcome ${id}!! </p>
-	<form action= "demande/addDemande" method="post" οnsubmit="return checkAll()">
+	<form action= "demande/addDemande" method="post">
         nom de service : <input type="text" name="nomService" /><br>
         type de service: <input type="text" name="typeService" /><br>
         nature de service : <input type="text" name="natureService" /><br>

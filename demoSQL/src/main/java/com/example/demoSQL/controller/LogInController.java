@@ -1,5 +1,7 @@
 package com.example.demoSQL.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,12 +19,16 @@ public class LogInController {
     LogInService service;
 
     @RequestMapping(value="", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap model){
-        return "login";
+    public String showLoginPage(ModelMap model, HttpSession session){
+    	if(session.getAttribute("userId")==null) {
+    		return "login";	
+    	}
+    	model.put("id", session.getAttribute("userId"));
+        return "successLogin";
     }
 
     @RequestMapping(value="", method = RequestMethod.POST)
-    public String showWelcomePage(ModelMap model, @RequestParam String id, @RequestParam String password){
+    public String showWelcomePage(ModelMap model, @RequestParam String id, @RequestParam String password, HttpSession session){
 
         boolean isValidUser = service.validateUser(id, password);
 
@@ -30,6 +36,8 @@ public class LogInController {
             model.put("errorMessage", "Invalid Credentials");
             return "login";
         }
+        //登录成功, 把session的userId设为id
+    	session.setAttribute("userId", id);
 
         model.put("username", id);
         model.put("password", password);
