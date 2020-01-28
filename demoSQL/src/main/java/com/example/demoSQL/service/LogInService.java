@@ -25,5 +25,8 @@ public class LogInService {
 		return userDo.getPassWord().equals(password);
 		//return true;
 	}
+	public void stockUser(UserDo ud) {
+		userDao.save(ud);
+	}
 
 }

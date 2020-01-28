@@ -1,0 +1,27 @@
+<html>
+
+<head>
+<title>Login ou creation du compte</title>
+</head>
+	<h1>Login</h1>
+    <font color="red">${errorMessage}</font>
+    <form method="post">
+        Name : <input type="text" name="id" />
+        Password : <input type="password" name="password" /> 
+        <input type="submit" />
+    </form>
+    <h2>Creer un compte</h2>
+    <form action= "login/compte" method="post">
+         ID : <input type="text" name="userId" /><br>
+         Pass word: <input type="text" name="password" /><br>
+         Nom : <input type="text" name="nom" /><br>
+         Prenom : <input type="text" name="prenom" /><br>
+         Pseudonyme : <input type="text" name="pseudonyme" /><br>
+         Addresse : <input type="text" name="adresse" /><br>
+         Telephone : <input type="text" name="telephone" /><br>
+         Description : <input type="text" name="description" /><br>      
+        <input type="submit" value = "Submit demande"/><br>
+    </form> 
+</body>
+
+</html>

@@ -25,7 +25,6 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
 <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
-<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.service.ServiceDaoYi"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.ServiceProDoYi"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -36,4 +35,11 @@
 <fullyQualifiedTypeName name="com.example.demoSQL.service.ServiceProService"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.ServiceProDo"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
 </qualifiedTypeNameHistroy>

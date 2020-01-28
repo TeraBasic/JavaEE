@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * @since 
  */
 @Entity
-@Table(name = "service_offre")
+@Table(name = "offre")
 public class OfferDo {
 	@Id
     private Long offerId;

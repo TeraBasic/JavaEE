@@ -1,0 +1,9 @@
+1580220217557	Rename field 'service'
+1580222237096	Rename type 'ServiceDemandeDao'
+1580222338285	Rename type 'ServiceDemandeDo'
+1580222487836	Rename method 'getAllService'
+1580222501271	Rename method 'getOneService'
+1580222622820	Rename type 'OfferService_Y'
+1580226328173	Rename type 'ServiceDemandeController'
+1580226390394	Rename type 'ServiceProController'
+1580227227172	Delete element

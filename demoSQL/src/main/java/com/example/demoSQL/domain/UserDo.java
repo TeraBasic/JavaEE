@@ -15,7 +15,7 @@ import org.hibernate.annotations.GenericGenerator;
  * @since 
  */
 @Entity
-@Table(name = "AUTH_USER")
+@Table(name = "user")
 public class UserDo {
 	@Id
 	@Column(name = "USER_ID",unique=true,columnDefinition="VARCHAR(64)")
