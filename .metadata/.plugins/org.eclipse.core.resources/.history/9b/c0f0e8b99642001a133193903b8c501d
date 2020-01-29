@@ -6,6 +6,6 @@ import com.example.demoSQL.domain.OfferDo;
 import com.example.demoSQL.domain.UserDo;
 
 @Repository
-public interface OfferDao extends JpaRepository<OfferDo, Long> {
+public interface OfferDao extends JpaRepository<OfferDo, String> {
 
 }

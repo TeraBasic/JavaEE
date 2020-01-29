@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demoSQL.domain.OfferDo;
 import com.example.demoSQL.domain.UserDo;
-import com.example.demoSQL.service.OfferDao;
+import com.example.demoSQL.service.OfferDao_Y;
 import com.example.demoSQL.service.UserDao;
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ public class Application {
 	@Autowired
     private UserDao userDao;
 	@Autowired
-	private OfferDao serviceDao;
+	private OfferDao_Y serviceDao;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

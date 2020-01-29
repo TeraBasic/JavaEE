@@ -14,7 +14,7 @@ public class OfferDemandService {
 	private OfferDao offerDao;
 	@Autowired
 	private DemandeDao dd;
-	public OfferDo getOneOffer(Long id) {
+	public OfferDo getOneOffer(String id) {
 		return this.offerDao.getOne(id);
 	}
 	

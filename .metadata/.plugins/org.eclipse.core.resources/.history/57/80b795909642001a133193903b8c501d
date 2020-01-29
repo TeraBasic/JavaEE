@@ -11,15 +11,15 @@ import com.example.demoSQL.domain.OfferDo;
 @Service
 public class OfferDemandService {
 	@Autowired
-	private OfferDao offerDao;
+	private OfferDao_Y offerDao_Y;
 	@Autowired
 	private DemandeDao dd;
-	public OfferDo getOneOffer(Long id) {
-		return this.offerDao.getOne(id);
+	public OfferDo getOneOffer(String id) {
+		return this.offerDao_Y.getOne(id);
 	}
 	
 	public List<OfferDo> getAllOffer(){
-		return this.offerDao.findAll();
+		return this.offerDao_Y.findAll();
 	}
 	
 	public DemandeDo getOneDemande(int id) {
