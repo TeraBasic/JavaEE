@@ -36,6 +36,7 @@ public class Application {
 		userDo.setAddresse("46 desborde valmeir");
 		userDo.setDescription("etudiant daupohie");
 		userDo.setPassWord("1442424");
+		userDo.setUserType("administrateur");
         userDao.save(userDo);
         
         userDo = new UserDo();
@@ -47,6 +48,7 @@ public class Application {
 		userDo.setAddresse("la defenfes");
 		userDo.setDescription("hehhehehe");
 		userDo.setPassWord("123456");
+		userDo.setUserType("administrateur");
         userDao.save(userDo);
         
         userDo = new UserDo();
@@ -58,6 +60,7 @@ public class Application {
 		userDo.setAddresse("la france terre");
 		userDo.setDescription("meieihehee");
 		userDo.setPassWord("88888");
+		userDo.setUserType("administrateur");
         userDao.save(userDo);
 		
         return "user has already added";

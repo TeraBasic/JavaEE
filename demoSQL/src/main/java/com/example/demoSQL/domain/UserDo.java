@@ -35,6 +35,8 @@ public class UserDo {
     private String telephone;
     @Column(length = 32)
     private String description;
+    @Column(length = 32)
+    private String userType;
     
     public String getId() {
     	return this.userId;
@@ -83,6 +85,13 @@ public class UserDo {
     }
     public void setDescription(String des) {
     	this.description = des;
+    	
+    }
+    public String getUserType() {
+    	return this.userType;
+    }
+    public void setUserType(String userType) {
+    	this.userType = userType;
     	
     }
    
