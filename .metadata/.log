@@ -8494,3 +8494,184 @@ org.eclipse.jface.text.BadPartitioningException
 	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo(PropertiesFileHover.java:135)
 	at org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileHover.getHoverInfo2(PropertiesFileHover.java:108)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 17:35:59.371
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bBkChkZh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 17:35:59.374
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.bBkChkZh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 17:35:59.375
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 17:35:59.375
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bBkChkZh => OK
+!SESSION 2020-01-28 20:30:34.714 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/utilisateur/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/utilisateur/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-01-28 20:30:42.815
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2020-01-28 20:30:45.899
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-28 20:30:45.899
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3180131e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62376bdd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-28 20:30:45.899
+!MESSAGE A conflict occurred for COMMAND+SHIFT+F10:
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.jboss.tools.common.ui.RegisterAsService,Register As Service,
+		Adds class name to META-INF/services/%serviceType% file after service type is selected in the dialog from types extended and implemented by the class.,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b8a063d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.eclipse.ui.window.showSystemMenu,Show System Menu,
+		Show the system menu,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a36da5e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.ui 2 2 2020-01-28 20:31:04.228
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:42.808
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:42.810
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@638efdae[org.springframework.tooling.boot.ls:1.14.0.201912170939(id=1115)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:42.815
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:42.937
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:47.940
+!MESSAGE Boot LS startup time from start to initialized: 5096ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.016
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tyPDWRCpisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.025
+!MESSAGE subscribing to classpath changes: sts4.classpath.tyPDWRCp isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.031
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.037
+!MESSAGE subsribers = {sts4.classpath.tyPDWRCp=Send Classpath Notifications(867)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.038
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.039
+!MESSAGE project demoSQL ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.040
+!MESSAGE project AppClientTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.041
+!MESSAGE project AppClientTest SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.041
+!MESSAGE project BanqueTestWeb ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.042
+!MESSAGE project HelloWorld ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.049
+!MESSAGE project HelloWorld SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.050
+!MESSAGE project JSF-EJB-JPA-Crud-Example ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.051
+!MESSAGE project JSF-EJB-JPA-Crud-Example SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.051
+!MESSAGE project JSFTest ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.052
+!MESSAGE project JSFTest SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.053
+!MESSAGE project Leetcode ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.056
+!MESSAGE project first-maven ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.056
+!MESSAGE project first-maven SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.057
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.059
+!MESSAGE Preparing classpath changed notification demoSQL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.059
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tyPDWRCp => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.060
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.074
+!MESSAGE classpath=116 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.077
+!MESSAGE buffering callback sts4.classpath.tyPDWRCp demoSQL false 116
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.078
+!MESSAGE Preparing classpath changed notification BanqueTestWeb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.079
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.085
+!MESSAGE classpath=65 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.087
+!MESSAGE buffering callback sts4.classpath.tyPDWRCp BanqueTestWeb false 65
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.088
+!MESSAGE Preparing classpath changed notification Leetcode
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.088
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.090
+!MESSAGE classpath=18 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.092
+!MESSAGE buffering callback sts4.classpath.tyPDWRCp Leetcode false 18
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.092
+!MESSAGE executing callback sts4.classpath.tyPDWRCp 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-28 20:31:48.173
+!MESSAGE executing callback sts4.classpath.tyPDWRCp SUCCESS [done]

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demoSQL.domain.DemandeDo;
-import com.example.demoSQL.domain.OfferDo_Y;
+import com.example.demoSQL.domain.OfferDo;
 
 @Service
 public class OfferDemandService {
@@ -14,11 +14,11 @@ public class OfferDemandService {
 	private OfferDao_Y offerDao_Y;
 	@Autowired
 	private DemandeDao dd;
-	public OfferDo_Y getOneOffer(String id) {
+	public OfferDo getOneOffer(String id) {
 		return this.offerDao_Y.getOne(id);
 	}
 	
-	public List<OfferDo_Y> getAllOffer(){
+	public List<OfferDo> getAllOffer(){
 		return this.offerDao_Y.findAll();
 	}
 	

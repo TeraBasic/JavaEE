@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demoSQL.domain.OfferDo_Y;
+import com.example.demoSQL.domain.OfferDo;
 import com.example.demoSQL.domain.UserDo;
 import com.example.demoSQL.service.LogInService;
 import com.example.demoSQL.service.OfferDemandService;
@@ -25,9 +25,9 @@ public class IndexController {
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
     public String showLoginPage(ModelMap model){
-		List<OfferDo_Y> serviceList = this.offerDemandService.getAllOffer();
+		List<OfferDo> serviceList = this.offerDemandService.getAllOffer();
         model.put("serviceProList", serviceList);
-        for (OfferDo_Y e : serviceList) {
+        for (OfferDo e : serviceList) {
         	System.out.println(e.getnomService());
         	System.out.println(e.getDescription());       	
         }

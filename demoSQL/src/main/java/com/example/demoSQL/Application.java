@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demoSQL.domain.OfferDo_Y;
+import com.example.demoSQL.domain.OfferDo;
 import com.example.demoSQL.domain.UserDo;
 import com.example.demoSQL.service.OfferDao_Y;
 import com.example.demoSQL.service.UserDao;
@@ -64,7 +64,7 @@ public class Application {
    } 
 	@RequestMapping(value = "/service")
 	public String creatServiceP() {
-		OfferDo_Y serviceP = new OfferDo_Y();
+		OfferDo serviceP = new OfferDo();
 		serviceP.setCompteId(10001L);
 		serviceP.setnomService("Netoyer la toilette");
 		serviceP.setTypeService("Service a offirir");
@@ -79,7 +79,7 @@ public class Application {
 		serviceP.setDescriptionDetail("This is the first serviece detail ");
 		serviceDao.save(serviceP);
 		
-		serviceP = new OfferDo_Y();
+		serviceP = new OfferDo();
 		serviceP.setCompteId(10002L);
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
@@ -94,7 +94,7 @@ public class Application {
 		serviceP.setDescriptionDetail("This is the 2 serviece detail ");
 		serviceDao.save(serviceP);
 		
-		serviceP = new OfferDo_Y();
+		serviceP = new OfferDo();
 		serviceP.setCompteId(10003L);
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");

@@ -38,8 +38,9 @@
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
 <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.DemandeDo"/>
 </qualifiedTypeNameHistroy>

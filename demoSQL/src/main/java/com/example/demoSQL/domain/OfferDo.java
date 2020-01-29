@@ -13,20 +13,20 @@ import javax.persistence.Table;
  * @since 
  */
 @Entity
-@Table(name = "offre")
+@Table(name = "offer")
 public class OfferDo {
 	@Id
-    private Long offerId;
-	@Column(length = 32)
-	private Long userId;
+    private Long compteId;   
     @Column(length = 32)
     private String typeService;
+    @Column(length = 32)
+    private String reference;
     @Column(length = 32)
     private String nomService;
     @Column(length = 64)
     private String natureService;
     @Column(length = 64)
-    private Date dateValide;
+    private Date dateValidOffert;
     @Column(length = 64)
     private String description;
     @Column(length = 64)
@@ -36,35 +36,33 @@ public class OfferDo {
     @Column(length = 64)
     private String etatService;
     
-    public Long getOfferId() {
-        return this.offerId;
-    }
-
-    public void setOfferId(Long id) {
-        this.offerId = id;
-    }
     
-    public Long getUserId() {
-        return this.userId;
+    public Long getCompteId() {
+        return this.compteId;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setCompteId(Long compteId) {
+        this.compteId = compteId;
     }
     
     public String getTypeService() {
         return this.typeService;
     }
-
+    public String getReference() {
+    	return this.reference;
+    }
+    public void setReference(String ref) {
+    	this.reference = ref;
+    }
     public void setTypeService(String typeService) {
         this.typeService = typeService;
     }
     
-    public String getNomService() {
+    public String getnomService() {
         return this.nomService;
     }
 
-    public void setNomService(String nomService) {
+    public void setnomService(String nomService) {
         this.nomService = nomService;
     }
     
@@ -75,26 +73,27 @@ public class OfferDo {
     public void setNatureService(String natureService) {
     	this.natureService = natureService;
     }
-       
-    public Date getDateValide() {
-    	return this.dateValide;
+    
+    
+    public Date getDateValideOffert() {
+    	return this.dateValidOffert;
     }
-    public void setDateValide(Date date) {
-    	this.dateValide = date;
+    public void setDateValideOffert(Date date) {
+    	this.dateValidOffert = date;
     }
     
     public String getDescription() {
     	return this.description;
     }
-    public void setDescription(String description) {
+    public void setDescription( String description) {
     	this.description = description;
     }
     
     public String getDescriptionDetail() {
     	return this.descriptionDetail;
     }
-    public void setDescriptionDetail(String description) {
-    	this.descriptionDetail = description;
+    public void setDescriptionDetail(String descriptionD) {
+    	this.descriptionDetail = descriptionD;
     }
     
     public String getLocalisationService() {
@@ -109,5 +108,11 @@ public class OfferDo {
     }
     public void setEtatService(String etaService) {
     	this.etatService = etaService;
-    }   
+    }
+ 
+    
+    
+    
+    
+
 }
