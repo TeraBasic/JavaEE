@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 
- * class entity
+ * class offerDo
+ * create the table of offer in the database
  * @author 
  * @since 
  */
@@ -16,7 +16,9 @@ import javax.persistence.Table;
 @Table(name = "offer")
 public class OfferDo {
 	@Id
-    private Long compteId;   
+    private Long offerId;
+	@Column
+    private String compteId;   
     @Column(length = 32)
     private String typeService;
     @Column(length = 32)
@@ -26,7 +28,7 @@ public class OfferDo {
     @Column(length = 64)
     private String natureService;
     @Column(length = 64)
-    private Date dateValidOffert;
+    private String dateValidOffert;
     @Column(length = 64)
     private String description;
     @Column(length = 64)
@@ -36,12 +38,19 @@ public class OfferDo {
     @Column(length = 64)
     private String etatService;
     
+    public Long getOfferId() {
+        return this.offerId;
+    }
+
+    public void setOfferId(long offerID2) {
+        this.offerId = offerID2;
+    }
     
-    public Long getCompteId() {
+    public String getCompteId() {
         return this.compteId;
     }
 
-    public void setCompteId(Long compteId) {
+    public void setCompteId(String compteId) {
         this.compteId = compteId;
     }
     
@@ -75,11 +84,11 @@ public class OfferDo {
     }
     
     
-    public Date getDateValideOffert() {
+    public String getDateValideOffert() {
     	return this.dateValidOffert;
     }
-    public void setDateValideOffert(Date date) {
-    	this.dateValidOffert = date;
+    public void setDateValideOffert(String dateValidOffert2) {
+    	this.dateValidOffert = dateValidOffert2;
     }
     
     public String getDescription() {
@@ -109,10 +118,4 @@ public class OfferDo {
     public void setEtatService(String etaService) {
     	this.etatService = etaService;
     }
- 
-    
-    
-    
-    
-
 }
