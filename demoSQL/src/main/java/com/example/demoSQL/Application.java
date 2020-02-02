@@ -68,7 +68,7 @@ public class Application {
 	@RequestMapping(value = "/service")
 	public String creatServiceP() {
 		OfferDo serviceP = new OfferDo();
-		serviceP.setCompteId(10001L);
+		serviceP.setCompteId("yee@dauphine.eu");
 		serviceP.setnomService("Netoyer la toilette");
 		serviceP.setTypeService("Service a offirir");
 		serviceP.setReference("reference 00001");
@@ -83,7 +83,7 @@ public class Application {
 		serviceDao.save(serviceP);
 		
 		serviceP = new OfferDo();
-		serviceP.setCompteId(10002L);
+		serviceP.setCompteId("mo@dauphine.eu");
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
 		serviceP.setReference("reference 00002");
@@ -98,7 +98,7 @@ public class Application {
 		serviceDao.save(serviceP);
 		
 		serviceP = new OfferDo();
-		serviceP.setCompteId(10003L);
+		serviceP.setCompteId("yiyii@dauphine.eu");
 		serviceP.setnomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
 		serviceP.setReference("reference 00003");

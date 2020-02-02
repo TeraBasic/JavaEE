@@ -28,7 +28,7 @@ public class OfferDo {
     @Column(length = 64)
     private String natureService;
     @Column(length = 64)
-    private String dateValidOffert;
+    private Date dateValidOffert;
     @Column(length = 64)
     private String description;
     @Column(length = 64)
@@ -84,10 +84,10 @@ public class OfferDo {
     }
     
     
-    public String getDateValideOffert() {
+    public Date getDateValideOffert() {
     	return this.dateValidOffert;
     }
-    public void setDateValideOffert(String dateValidOffert2) {
+    public void setDateValideOffert(Date dateValidOffert2) {
     	this.dateValidOffert = dateValidOffert2;
     }
     
