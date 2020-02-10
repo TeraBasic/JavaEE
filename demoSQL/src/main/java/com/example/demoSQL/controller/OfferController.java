@@ -31,8 +31,8 @@ public class OfferController {
 		return "offer";
     }
 
-	@RequestMapping(value="offer/proposeOffer", method = RequestMethod.POST)
-    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam String dateValidOffert, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService, HttpSession session){
+	@RequestMapping(value="offer/addOfferSuccesful", method = RequestMethod.POST)
+    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam Date dateValidOffert, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
 		if(session.getAttribute("userId")==null) {
     		return "login";	
     	}
@@ -42,16 +42,15 @@ public class OfferController {
 		String userId = (String) session.getAttribute("userId");
         offer.setOfferId(offerID);
         offer.setCompteId(userId);
-        offer.setnomService(nomService);
+        offer.setNomService(nomService);
         offer.setTypeService(typeService);
         offer.setNatureService(natureService);
         offer.setLocalisationService(localisationService);
-        offer.setEtatService(etatService);
+        offer.setEtatService("A_VALIDER");
         offer.setDescription(description);
-        Date dateValide=Date.valueOf(dateValidOffert);
-        offer.setDateValideOffert(dateValide);
+        offer.setDateValideOffert(dateValidOffert);
         offer.setDescriptionDetail(descriptionDetail);
         offerService.save(offer);
-        return "proposeOffer";    
+        return "addOfferSuccesful";    
     }
 }

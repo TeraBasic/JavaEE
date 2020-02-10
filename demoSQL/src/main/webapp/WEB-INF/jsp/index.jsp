@@ -39,7 +39,7 @@ table, th, td {
             </tr>
             <c:forEach var="service" items="${serviceProList}">
                 <tr class="text-info">
-                    <td>${service.reference}</td>
+                    <td>${service.offerId}</td>
                     <td>${service.typeService}</td>
                     <td>${service.natureService}</td>
                     <td>${service.description}</td>

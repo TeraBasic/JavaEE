@@ -31,7 +31,7 @@ public class IndexController {
         model.put("serviceProList", serviceList);
         model.put("demandProList", demandeList);
         for (OfferDo e : serviceList) {
-        	System.out.println(e.getnomService());
+        	System.out.println(e.getNomService());
         	System.out.println(e.getDescription());       	
         }
         for (DemandeDo e : demandeList) {

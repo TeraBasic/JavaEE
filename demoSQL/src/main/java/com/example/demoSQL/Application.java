@@ -69,12 +69,11 @@ public class Application {
 	public String creatServiceP() {
 		OfferDo serviceP = new OfferDo();
 		serviceP.setCompteId("yee@dauphine.eu");
-		serviceP.setnomService("Netoyer la toilette");
+		serviceP.setNomService("Netoyer la toilette");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00001");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString = "2020-01-23"; 
 	    Date date=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date);
@@ -84,12 +83,11 @@ public class Application {
 		
 		serviceP = new OfferDo();
 		serviceP.setCompteId("mo@dauphine.eu");
-		serviceP.setnomService("Do home work");
+		serviceP.setNomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00002");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString2 = "2020-02-24"; 
 	    Date date2=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date2);
@@ -99,12 +97,11 @@ public class Application {
 		
 		serviceP = new OfferDo();
 		serviceP.setCompteId("yiyii@dauphine.eu");
-		serviceP.setnomService("Do home work");
+		serviceP.setNomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00003");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString3 = "2020-03-24"; 
 	    Date date3=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date3);
