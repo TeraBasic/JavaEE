@@ -21,7 +21,6 @@ INDEX VERSION 1.131+/Users/utilisateur/Documents/Java_EE/.metadata/.plugins/org.
 3084183850.index
 545952932.index
 824185518.index
-2541647379.index
 4233646938.index
 599732350.index
 1926149216.index
