@@ -48,7 +48,7 @@ public class OfferController {
         offer.setLocalisationService(localisationService);
         offer.setEtatService("A_VALIDER");
         offer.setDescription(description);
-        offer.setDateValideOffert(dateValidOffert);
+        offer.setDateValidOffert(dateValidOffert);
         offer.setDescriptionDetail(descriptionDetail);
         offerService.save(offer);
         return "addOfferSuccesful";    

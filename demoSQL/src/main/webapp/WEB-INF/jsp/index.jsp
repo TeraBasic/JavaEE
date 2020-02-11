@@ -43,6 +43,9 @@ table, th, td {
                     <td>${service.typeService}</td>
                     <td>${service.natureService}</td>
                     <td>${service.description}</td>
+                    <td>
+                    	<a href="${pageContext.request.contextPath}/detailOffer/${service.offerId}">detail</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

@@ -27,11 +27,19 @@ public class ServiceDetailController {
 	private OfferDemandService offerDemandService;
 
 	@RequestMapping(value="detailDemande/{serviceId}", method = RequestMethod.GET)
-	public String showDetailPage(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
+	public String showDetailDemandePage(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
 		//model.put("id", serviceId);
 		
 		DemandeDo d = this.offerDemandService.getOneDemande(serviceId);
 		model.put("demande", d);
 		return "detailDemande";
+	}
+	@RequestMapping(value="detailOffer/{serviceId}", method = RequestMethod.GET)
+	public String showDetailOfferPage(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
+		//model.put("id", serviceId);
+		
+	    OfferDo o = this.offerDemandService.getOneOffer(serviceId);
+		model.put("offer", o);
+		return "detailOffer";
 	}
 }

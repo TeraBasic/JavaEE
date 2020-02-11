@@ -76,7 +76,7 @@ public class Application {
 		serviceP.setEtatService("A_VALIDER");
 		String dateString = "2020-01-23"; 
 	    Date date=Date.valueOf(dateString);//converting string into sql date  
-		serviceP.setDateValideOffert(date);
+		serviceP.setDateValidOffert(date);
 		serviceP.setDescription("This is the first serviece");
 		serviceP.setDescriptionDetail("This is the first serviece detail ");
 		serviceDao.save(serviceP);
@@ -90,7 +90,7 @@ public class Application {
 		serviceP.setEtatService("A_VALIDER");
 		String dateString2 = "2020-02-24"; 
 	    Date date2=Date.valueOf(dateString);//converting string into sql date  
-		serviceP.setDateValideOffert(date2);
+		serviceP.setDateValidOffert(date2);
 		serviceP.setDescription("This is the 2 serviece");
 		serviceP.setDescriptionDetail("This is the 2 serviece detail ");
 		serviceDao.save(serviceP);
@@ -104,7 +104,7 @@ public class Application {
 		serviceP.setEtatService("A_VALIDER");
 		String dateString3 = "2020-03-24"; 
 	    Date date3=Date.valueOf(dateString);//converting string into sql date  
-		serviceP.setDateValideOffert(date3);
+		serviceP.setDateValidOffert(date3);
 		serviceP.setDescription("This is the 3 serviece");
 		serviceP.setDescriptionDetail("This is the 3 serviece detail ");
 		serviceDao.save(serviceP);				

@@ -77,10 +77,10 @@ public class OfferDo {
     }
     
     
-    public Date getDateValideOffert() {
+    public Date getDateValidOffert() {
     	return this.dateValidOffert;
     }
-    public void setDateValideOffert(Date dateValidOffert2) {
+    public void setDateValidOffert(Date dateValidOffert2) {
     	this.dateValidOffert = dateValidOffert2;
     }
     
