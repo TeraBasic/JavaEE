@@ -66,6 +66,9 @@ table, th, td {
                     <td>${demand.typeService}</td>
                     <td>${demand.natureService}</td>
                     <td>${demand.description}</td>
+                    <td>
+                    	<a href="${pageContext.request.contextPath}/detailDemande/${demand.serviceDemandeId}">detail</a>
+                    </td>
                     
                     
                 </tr>

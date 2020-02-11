@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "demande")
 public class DemandeDo {
 	@Id
-	private int serviceDemandeId;
+	private Long serviceDemandeId;
 	@Column(length = 32)
 	private String compteId;
 	@Column(length = 32)
@@ -36,11 +36,11 @@ public class DemandeDo {
 	@Column(length = 64)
 	private String etatService;
 
-	public int getServiceDemandeId() {
+	public Long getServiceDemandeId() {
 		return this.serviceDemandeId;
 	}
 
-	public void setServiceDemandeId(int serviceDemandeID) {
+	public void setServiceDemandeId(Long serviceDemandeID) {
 		this.serviceDemandeId = serviceDemandeID;
 	}
 	public String getCompteId() {
@@ -75,11 +75,11 @@ public class DemandeDo {
 		this.natureService = natureService;
 	}
 
-	public Date getDateValideDemande() {
+	public Date getDateValidDemande() {
 		return this.dateValidDemande;
 	}
 
-	public void setDateValideDemande(Date date) {
+	public void setDateValidDemande(Date date) {
 		this.dateValidDemande = date;
 	}
 

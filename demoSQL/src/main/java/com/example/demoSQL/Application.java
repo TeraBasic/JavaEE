@@ -33,7 +33,7 @@ public class Application {
 		userDo.setPrenom("Yi");
 		userDo.setPseudonyme("hehhe");
 		userDo.setTelephone("123324525");
-		userDo.setAddresse("46 desborde valmeir");
+		userDo.setAdresse("46 desborde valmeir");
 		userDo.setDescription("etudiant daupohie");
 		userDo.setPassWord("1442424");
 		userDo.setUserType("administrateur");
@@ -45,7 +45,7 @@ public class Application {
 		userDo.setPrenom("Rui");
 		userDo.setPseudonyme("nicoldas");
 		userDo.setTelephone("5567666666");
-		userDo.setAddresse("la defenfes");
+		userDo.setAdresse("la defenfes");
 		userDo.setDescription("hehhehehe");
 		userDo.setPassWord("123456");
 		userDo.setUserType("administrateur");
@@ -57,7 +57,7 @@ public class Application {
 		userDo.setPrenom("You");
 		userDo.setPseudonyme("yoyoyyoy");
 		userDo.setTelephone("678999");
-		userDo.setAddresse("la france terre");
+		userDo.setAdresse("la france terre");
 		userDo.setDescription("meieihehee");
 		userDo.setPassWord("88888");
 		userDo.setUserType("administrateur");
@@ -111,7 +111,7 @@ public class Application {
 		return "service Propose has already added";
 	}
 	@GetMapping(value = "/delete/{id}")
-	public String login2(@PathVariable Long id) {
+	public String login2(@PathVariable String id) {
 		userDao.deleteById(id);
 		return "user "+id+" has been deleted";
 	}	

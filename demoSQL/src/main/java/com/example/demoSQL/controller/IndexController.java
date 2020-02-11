@@ -86,7 +86,7 @@ public class IndexController {
     	ud.setNom(nom);
     	ud.setPrenom(prenom);
     	ud.setPseudonyme(pseudonyme);
-    	ud.setAddresse(adresse);
+    	ud.setAdresse(adresse);
     	ud.setTelephone(telephone);
     	ud.setDescription(description);
     	ud.setUserType("member");

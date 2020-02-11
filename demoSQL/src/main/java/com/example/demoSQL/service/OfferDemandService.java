@@ -22,8 +22,8 @@ public class OfferDemandService {
 		return this.offerDao.findAll();
 	}
 	
-	public DemandeDo getOneDemande(int id) {
-		return this.dd.getOne((long) id);
+	public DemandeDo getOneDemande(Long id) {
+		return this.dd.getOne(id);
 	}
 	public List<DemandeDo> getAllDemande(){
 		return this.dd.findAll();

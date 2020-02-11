@@ -68,10 +68,10 @@ public class UserDo {
     public void setPseudonyme(String pseu) {
     	this.pseudonyme = pseu;
     }
-    public String getDdresse() {
+    public String getAdresse() {
     	return this.adresse;
     }
-    public void setAddresse(String add) {
+    public void setAdresse(String add) {
     	this.adresse = add;
     }
     public String getTelephone() {

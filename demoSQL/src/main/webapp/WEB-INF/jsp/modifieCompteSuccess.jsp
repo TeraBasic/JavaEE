@@ -1,10 +1,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Offer Service</title>
+<title>Demande Service</title>
 </head>
 <body>
-    <p> Add offer successful </p>
+    <p> Modifie Compte Success</p>
+	
 	
 </body>
 </html>

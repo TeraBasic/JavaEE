@@ -19,27 +19,26 @@ import com.example.demoSQL.domain.DemandeDo;
 import com.example.demoSQL.service.*;
 @Controller
 public class DemandeController {
-	int serviceDemandeId=0;
+	Long serviceDemandeId=(long) 0;
 	 
 	@Autowired
-	private DemandeDao serviceDemande;
-	LogInService service;
+    DemandeService demandeService;
 
 	@RequestMapping(value="demande", method = RequestMethod.GET)
 	public String showDemandePage(ModelMap model, HttpSession session){
 		if(session.getAttribute("userId")==null) {
-    		return "login";	
+			return "redirect:/login";
     	}
 		model.put("id", session.getAttribute("userId"));
 		return "demande";
     }
 	
-	@RequestMapping(value="demande/addDemande", method = RequestMethod.POST)
-    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam Date dateValidDemande, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService, HttpSession session){
+	@RequestMapping(value="demande/addDemandeSuccess", method = RequestMethod.POST)
+    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam Date dateValidDemande, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
 		if(session.getAttribute("userId")==null) {
-    		return "login";	
+			return "redirect:/login";
     	}
-		
+		String etatService="A VALIDER";
 		DemandeDo demande = new DemandeDo();
 		serviceDemandeId++;
 		String userId = (String) session.getAttribute("userId");
@@ -51,10 +50,10 @@ public class DemandeController {
         demande.setLocalisationService(localisationService);
         demande.setEtatService(etatService);
         demande.setDescription(description);
-        demande.setDateValideDemande(dateValidDemande);
+        demande.setDateValidDemande(dateValidDemande);
         demande.setDescriptionDetail(descriptionDetail);
-        serviceDemande.save(demande);
-        return "addDemande";
+        this.demandeService.stockDemande(demande);
+        return "addDemandeSuccess";
 
     
     }
