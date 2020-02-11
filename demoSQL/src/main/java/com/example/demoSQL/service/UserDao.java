@@ -8,7 +8,7 @@ import com.example.demoSQL.domain.UserDo;
  *
  */
 @Repository
-public interface UserDao extends JpaRepository<UserDo, Long> {
+public interface UserDao extends JpaRepository<UserDo, String> {
 
 }
 

@@ -22,8 +22,6 @@ public class OfferDo {
     @Column(length = 32)
     private String typeService;
     @Column(length = 32)
-    private String reference;
-    @Column(length = 32)
     private String nomService;
     @Column(length = 64)
     private String natureService;
@@ -57,21 +55,16 @@ public class OfferDo {
     public String getTypeService() {
         return this.typeService;
     }
-    public String getReference() {
-    	return this.reference;
-    }
-    public void setReference(String ref) {
-    	this.reference = ref;
-    }
+    
     public void setTypeService(String typeService) {
         this.typeService = typeService;
     }
     
-    public String getnomService() {
+    public String getNomService() {
         return this.nomService;
     }
 
-    public void setnomService(String nomService) {
+    public void setNomService(String nomService) {
         this.nomService = nomService;
     }
     

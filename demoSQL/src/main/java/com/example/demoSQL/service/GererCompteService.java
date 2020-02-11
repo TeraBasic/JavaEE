@@ -1,5 +1,6 @@
 package com.example.demoSQL.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
@@ -12,21 +13,20 @@ import org.springframework.stereotype.Service;
 import com.example.demoSQL.domain.UserDo;
 
 @Service
-public class LogInService {
+public class GererCompteService {
 	@Autowired
     private UserDao userDao;
 	@PersistenceContext
     private EntityManager entityManager;
 
+	public void updateUser(UserDo ud) {
+		userDao.saveAndFlush(ud);
+	}
+	public UserDo getOneUser(String id) {
+		return this.userDao.getOne(id);
+	}
 	
-	public boolean validateUser(String id, String password) {
-		//UserDo userDo = userDao.getOne(id);
-		UserDo userDo = entityManager.find(UserDo.class, id);
-		return userDo.getPassWord().equals(password);
-		//return true;
+	public List<UserDo> getAllUser(){
+		return this.userDao.findAll();
 	}
-	public void stockUser(UserDo ud) {
-		userDao.save(ud);
-	}
-
 }

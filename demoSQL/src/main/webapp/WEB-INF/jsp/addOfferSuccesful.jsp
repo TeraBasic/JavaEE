@@ -1,10 +1,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Demande Service</title>
+<title>Offer Service</title>
 </head>
 <body>
-    <p> Add demande sucess </p>
+    <p> Add offer successful </p>
 	
 </body>
 </html>

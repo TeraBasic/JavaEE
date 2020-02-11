@@ -29,7 +29,7 @@ public class IndexController {
         model.put("serviceProList", serviceList);
         model.put("demandProList", demandeList);
         for (OfferDo e : serviceList) {
-        	System.out.println(e.getnomService());
+        	System.out.println(e.getNomService());
         	System.out.println(e.getDescription());       	
         }
         for (DemandeDo e : demandeList) {
@@ -84,7 +84,7 @@ public class IndexController {
     	ud.setNom(nom);
     	ud.setPrenom(prenom);
     	ud.setPseudonyme(pseudonyme);
-    	ud.setAddresse(adresse);
+    	ud.setAdresse(adresse);
     	ud.setTelephone(telephone);
     	ud.setDescription(description);
     	ud.setUserType("member");

@@ -33,7 +33,7 @@ public class Application {
 		userDo.setPrenom("Yi");
 		userDo.setPseudonyme("hehhe");
 		userDo.setTelephone("123324525");
-		userDo.setAddresse("46 desborde valmeir");
+		userDo.setAdresse("46 desborde valmeir");
 		userDo.setDescription("etudiant daupohie");
 		userDo.setPassWord("1442424");
 		userDo.setUserType("administrateur");
@@ -45,7 +45,7 @@ public class Application {
 		userDo.setPrenom("Rui");
 		userDo.setPseudonyme("nicoldas");
 		userDo.setTelephone("5567666666");
-		userDo.setAddresse("la defenfes");
+		userDo.setAdresse("la defenfes");
 		userDo.setDescription("hehhehehe");
 		userDo.setPassWord("123456");
 		userDo.setUserType("administrateur");
@@ -57,7 +57,7 @@ public class Application {
 		userDo.setPrenom("You");
 		userDo.setPseudonyme("yoyoyyoy");
 		userDo.setTelephone("678999");
-		userDo.setAddresse("la france terre");
+		userDo.setAdresse("la france terre");
 		userDo.setDescription("meieihehee");
 		userDo.setPassWord("88888");
 		userDo.setUserType("administrateur");
@@ -69,12 +69,11 @@ public class Application {
 	public String creatServiceP() {
 		OfferDo serviceP = new OfferDo();
 		serviceP.setCompteId("yee@dauphine.eu");
-		serviceP.setnomService("Netoyer la toilette");
+		serviceP.setNomService("Netoyer la toilette");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00001");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString = "2020-01-23"; 
 	    Date date=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date);
@@ -84,12 +83,11 @@ public class Application {
 		
 		serviceP = new OfferDo();
 		serviceP.setCompteId("mo@dauphine.eu");
-		serviceP.setnomService("Do home work");
+		serviceP.setNomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00002");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString2 = "2020-02-24"; 
 	    Date date2=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date2);
@@ -99,12 +97,11 @@ public class Application {
 		
 		serviceP = new OfferDo();
 		serviceP.setCompteId("yiyii@dauphine.eu");
-		serviceP.setnomService("Do home work");
+		serviceP.setNomService("Do home work");
 		serviceP.setTypeService("Service a offirir");
-		serviceP.setReference("reference 00003");
 		serviceP.setNatureService("Nature de la service");
 		serviceP.setLocalisationService("Paris");
-		serviceP.setEtatService("A valider");
+		serviceP.setEtatService("A_VALIDER");
 		String dateString3 = "2020-03-24"; 
 	    Date date3=Date.valueOf(dateString);//converting string into sql date  
 		serviceP.setDateValideOffert(date3);
@@ -114,7 +111,7 @@ public class Application {
 		return "service Propose has already added";
 	}
 	@GetMapping(value = "/delete/{id}")
-	public String login2(@PathVariable Long id) {
+	public String login2(@PathVariable String id) {
 		userDao.deleteById(id);
 		return "user "+id+" has been deleted";
 	}	

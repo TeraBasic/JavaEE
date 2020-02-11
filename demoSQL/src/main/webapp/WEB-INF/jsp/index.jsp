@@ -39,7 +39,7 @@ table, th, td {
             </tr>
             <c:forEach var="service" items="${serviceProList}">
                 <tr class="text-info">
-                    <td>${service.reference}</td>
+                    <td>${service.offerId}</td>
                     <td>${service.typeService}</td>
                     <td>${service.natureService}</td>
                     <td>${service.description}</td>
@@ -66,6 +66,9 @@ table, th, td {
                     <td>${demand.typeService}</td>
                     <td>${demand.natureService}</td>
                     <td>${demand.description}</td>
+                    <td>
+                    	<a href="${pageContext.request.contextPath}/detailDemande/${demand.serviceDemandeId}">detail</a>
+                    </td>
                     
                     
                 </tr>

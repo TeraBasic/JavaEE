@@ -9,24 +9,20 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demoSQL.domain.UserDo;
+
+import com.example.demoSQL.domain.DemandeDo;
+
 
 @Service
-public class LogInService {
+public class DemandeService {
 	@Autowired
-    private UserDao userDao;
+    private DemandeDao demandeDao;
 	@PersistenceContext
     private EntityManager entityManager;
 
 	
-	public boolean validateUser(String id, String password) {
-		//UserDo userDo = userDao.getOne(id);
-		UserDo userDo = entityManager.find(UserDo.class, id);
-		return userDo.getPassWord().equals(password);
-		//return true;
-	}
-	public void stockUser(UserDo ud) {
-		userDao.save(ud);
+	public void stockDemande(DemandeDo ud) {
+		demandeDao.save(ud);
 	}
 
 }
