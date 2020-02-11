@@ -45,17 +45,31 @@ public class GererCompteController {
 		return "afficheCompteInfo";
     }
 	@RequestMapping(value="modifieCompteSuccess", method = RequestMethod.POST)
-    public String creerCompte(ModelMap model,HttpSession session, @RequestParam String nom,@RequestParam String prenom,@RequestParam String pseudonyme,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description) {
-    	UserDo ud = new UserDo();
-    	String id= (String) session.getAttribute("userId");
-    	ud.setId(id);
-    	ud.setNom(nom);
-    	ud.setPrenom(prenom);
-    	ud.setPseudonyme(pseudonyme);
-    	ud.setAdresse(adresse);
-    	ud.setTelephone(telephone);
-    	ud.setDescription(description);
+    public String modifieCompte(ModelMap model,HttpSession session, @RequestParam String nom,@RequestParam String prenom,@RequestParam String pseudonyme,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description) {
+		String id= (String) session.getAttribute("userId");
+		UserDo ud= this.gererCompte.getOneUser(id);
     	
+    	ud.setId(id);
+    	if (nom!=null) {
+    		ud.setNom(nom);
+    	}
+    	if (prenom!=null) {
+    		ud.setPrenom(prenom);
+    	}
+    	if (pseudonyme!=null) {
+    		ud.setPseudonyme(pseudonyme);
+    	}
+    	if (adresse!=null) {
+    		ud.setAdresse(adresse);
+    	}
+    	if (telephone!=null) {
+    		ud.setTelephone(telephone);
+    	}
+    	if (description!=null) {
+    		ud.setDescription(description);
+    	}
+    	
+    	model.put("userCompte", ud);
     	this.gererCompte.updateUser(ud);   	
     	return "modifieCompteSuccess";
     }
