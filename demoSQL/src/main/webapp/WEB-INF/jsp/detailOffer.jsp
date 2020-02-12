@@ -32,6 +32,7 @@
 	                    <td>${offer.descriptionDetail}</td>
 	    </tr>
     </table>
+    <a href="${pageContext.request.contextPath}/index">Index</a><br/>
     </div>
 </body>
 </html>

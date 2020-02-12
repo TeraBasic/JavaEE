@@ -9,6 +9,10 @@
 table, th, td {
   border: 1px solid black;
 }
+.btn btn-default{
+	float:right;	
+
+})
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -17,12 +21,10 @@ table, th, td {
 
 <ul style="list-style-type:disc">
  <li>
-  <a href="login" class="btn btn-default">Login</a>
+  <a href="login" class="btn btn-default"># Login #</a>
+  <a href="creerCompte" class="btn btn-default">-----# Create count #</a>
+  <a href="home" class="btn btn-default">-----# Home #</a>
  </li>
- <li>
-  <a href="creerCompte" class="btn btn-default">Create compte</a>
- </li>
- 
 </ul>  
 
 

@@ -1,6 +1,7 @@
 package com.example.demoSQL.controller;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,13 @@ public class IndexController {
     LogInService loginService;
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap model){
+    public String showService(ModelMap model){
 		List<OfferDo> serviceList = this.offerDemandService.getAllOffer();
 		List<DemandeDo> demandeList = this.offerDemandService.getAllDemande();
-        model.put("serviceProList", serviceList);
-        model.put("demandProList", demandeList);
+        //model.put("serviceProList", serviceList);
+        //model.put("demandProList", demandeList);
+		model.addAttribute("serviceProList", serviceList);
+		model.addAttribute("demandProList", demandeList);
         for (OfferDo e : serviceList) {
         	System.out.println(e.getNomService());
         	System.out.println(e.getDescription());       	
@@ -46,7 +49,7 @@ public class IndexController {
     		return "login";	
     	}
     	model.put("id", session.getAttribute("userId"));
-        return "successLogin";
+        return "home";
     }
 
     @RequestMapping(value="login", method = RequestMethod.POST)
@@ -58,13 +61,11 @@ public class IndexController {
             model.put("errorMessage", "Invalid Credentials");
             return "login";
         }
-        //登录成功, 把session的userId设为id
     	session.setAttribute("userId", id);
-
         model.put("username", id);
         model.put("password", password);
 
-        return "successLogin";
+        return "home";
     }
     
     @RequestMapping(value="creerCompte", method = RequestMethod.GET)
@@ -73,7 +74,15 @@ public class IndexController {
     		return "reg";	
     	}
     	model.put("id", session.getAttribute("userId"));
-        return "successLogin";
+        return "home";
+    }
+    @RequestMapping(value="home", method = RequestMethod.GET)
+    public String showHome(ModelMap model, HttpSession session) {
+    	if(session.getAttribute("userId")==null) {
+    		return "login";	
+    	}
+    	model.put("id", session.getAttribute("userId"));
+        return "home";
     }
     
     @RequestMapping(value="creerCompte", method = RequestMethod.POST)
@@ -89,7 +98,7 @@ public class IndexController {
     	ud.setDescription(description);
     	ud.setUserType("member");
     	this.loginService.stockUser(ud);   	
-    	return "successLogin";
+    	return "home";
     }
 
 }

@@ -7,10 +7,9 @@
     <form method="post">
         Name : <input type="text" name="id" />
         Password : <input type="password" name="password" /> 
-        <input type="submit" />
-        <button type="submit" id="btn-login">Login</button>
-        <a href="creerCompte" class="btn btn-default">Creer un compte</a>
+        <input type="submit" value = "Login"/>
     </form>
+    <a href="${pageContext.request.contextPath}/index">Index</a><br/>   
 </body>
 
 </html>

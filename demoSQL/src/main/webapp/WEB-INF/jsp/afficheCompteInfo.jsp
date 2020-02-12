@@ -11,25 +11,14 @@ table, th, td {
 }
 </style>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Compte info</title>
 </head>
-<body style="background-image: none;">
+<body>
 
-<ul style="list-style-type:disc">
- <li>
-  <a href="login" class="btn btn-default">Login</a>
- </li>
- <li>
-  <a href="creerCompte" class="btn btn-default">Create compte</a>
- </li>
- 
-</ul>  
-
-<h2>Compte</h2>
-<div class="body_offer">
-    <div class="container">
-        <div class="alert alert-success text-center" role="alert"> Service proposition</div>
-        <table class="table table-striped table-bordered">
+<h2>Compte info</h2>
+<div>
+    <div>
+        <table>
             <tr>
                 <td>Nom</td>
                 <td>Prénom</td>
@@ -38,7 +27,7 @@ table, th, td {
                 
             </tr>
             
-		        <tr class="text-info">
+		        <tr>
 		         <td>${userCompte.nom}</td>
 		         <td>${userCompte.prenom}</td>
 		         <td>${userCompte.telephone}</td>

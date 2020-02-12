@@ -15,7 +15,7 @@
          Addresse : <input type="text" name="adresse" /><br>
          Telephone : <input type="text" name="telephone" /><br>
          Description : <input type="text" name="description" /><br>      
-        <input type="submit" value = "Submit demande"/><br>
+        <input type="submit" value = "Submit"/><br>
     </form>
 	
 </body>
