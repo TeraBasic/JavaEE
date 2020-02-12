@@ -25,7 +25,7 @@ table, th, td {
  
 </ul>  
 
-<h2>Demande</h2>
+<h2>Compte</h2>
 <div class="body_offer">
     <div class="container">
         <div class="alert alert-success text-center" role="alert"> Service proposition</div>
