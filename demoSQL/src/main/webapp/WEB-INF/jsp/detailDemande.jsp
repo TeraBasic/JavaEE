@@ -19,7 +19,6 @@
                 <td>Localisation service</td>
                 <td>Description courte</td>
                 <td>Description détail</td>
-                
         </tr>
 		<tr class="text-info">
 	                    <td>${demande.serviceDemandeId}</td>
@@ -32,6 +31,7 @@
 	                    <td>${demande.localisationService}</td>
 	    </tr>
     </table>
+    <a href="${pageContext.request.contextPath}/proposeService/${demande.serviceDemandeId}/${demande.compteId}">Proposer Service</a><br/>
     <a href="${pageContext.request.contextPath}/index">Index</a><br/>
     </div>
 </body>

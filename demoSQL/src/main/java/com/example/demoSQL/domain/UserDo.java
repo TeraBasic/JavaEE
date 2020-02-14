@@ -20,7 +20,6 @@ public class UserDo {
 	@Id
 	@Column(name = "USER_ID",unique=true,columnDefinition="VARCHAR(64)")
 	private String userId;
-    
     @Column(length = 32)
     private String password;
     @Column(length = 32)

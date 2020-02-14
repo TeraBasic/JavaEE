@@ -27,19 +27,8 @@ public class IndexController {
     public String showService(ModelMap model){
 		List<OfferDo> serviceList = this.offerDemandService.getAllOffer();
 		List<DemandeDo> demandeList = this.offerDemandService.getAllDemande();
-        //model.put("serviceProList", serviceList);
-        //model.put("demandProList", demandeList);
 		model.addAttribute("serviceProList", serviceList);
 		model.addAttribute("demandProList", demandeList);
-        for (OfferDo e : serviceList) {
-        	System.out.println(e.getNomService());
-        	System.out.println(e.getDescription());       	
-        }
-        for (DemandeDo e : demandeList) {
-        	System.out.println(e.getnomService());
-        	System.out.println(e.getDescription());       	
-        }
-        
 		return "index";
     }
 	
