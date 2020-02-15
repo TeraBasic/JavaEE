@@ -52,22 +52,22 @@ public class HomeController {
 		UserDo ud= this.gererCompte.getOneUser(id);
     	
     	ud.setId(id);
-    	if (nom!=null) {
+    	if (nom!=null&&!nom.equals("")) {
     		ud.setNom(nom);
     	}
-    	if (prenom!=null) {
+    	if (prenom!=null&&!prenom.equals("")) {
     		ud.setPrenom(prenom);
     	}
-    	if (pseudonyme!=null) {
+    	if (pseudonyme!=null&&!pseudonyme.equals("")) {
     		ud.setPseudonyme(pseudonyme);
     	}
-    	if (adresse!=null) {
+    	if (adresse!=null&&!adresse.equals("")) {
     		ud.setAdresse(adresse);
     	}
-    	if (telephone!=null) {
+    	if (telephone!=null&&!telephone.equals("")) {
     		ud.setTelephone(telephone);
     	}
-    	if (description!=null) {
+    	if (description!=null&&!description.equals("")) {
     		ud.setDescription(description);
     	}
     	
