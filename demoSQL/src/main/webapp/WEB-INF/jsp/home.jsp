@@ -13,6 +13,7 @@
 	<a href="${pageContext.request.contextPath}/demande">Demande service</a><br/></p>
 	<a href="${pageContext.request.contextPath}/offer">Offer service</a><br/></p>
 	<a href="${pageContext.request.contextPath}/afficheCompteInfo">Compte Info</a><br/></p>
-	<a href="${pageContext.request.contextPath}/rechercheDemande">Recherche Demande</a><br/>
+	<a href="${pageContext.request.contextPath}/rechercheDemande">Recherche Demande</a><br/></p>
+	<a href="${pageContext.request.contextPath}/rechercheOffer">Recherche Offer</a><br/></p>
 	</body>
 </html>

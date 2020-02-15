@@ -123,7 +123,7 @@ public class HomeController {
     }
 
 	@RequestMapping(value="offer/addOfferSuccesful", method = RequestMethod.POST)
-    public String addOffer(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam Date dateValidOffert, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
+    public String addOffer(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam String dateValidOffert, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
 		if(session.getAttribute("userId")==null) {
     		return "login";	
     	}
@@ -139,7 +139,10 @@ public class HomeController {
         offer.setLocalisationService(localisationService);
         offer.setEtatService("A_VALIDER");
         offer.setDescription(description);
-        offer.setDateValidOffert(dateValidOffert);
+        if(dateValidOffert!=null&&!dateValidOffert.equals("")) {
+        	Date date=Date.valueOf(dateValidOffert);
+        	offer.setDateValidOffert(date);
+        }
         offer.setDescriptionDetail(descriptionDetail);
         offerService.save(offer);
         return "addOfferSuccess";    

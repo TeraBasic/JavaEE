@@ -5,10 +5,10 @@
 </head>
 <body>
 	<div align='center'>
-	    <p> Recherche Service demande </p>
+	    <p> Recherche Service Offert</p>
 	    <p> Welcome ${id}!! </p>
-		<form action= "infoDeRechercheDemande" method="post">
-			Id de service <input type="number" name="idDemande" min="1" /><br>
+		<form action= "infoDeRechercheOffer" method="post">
+			Id de service <input type="number" name="idOffert" min="1" /><br>
 	        Type de service: <select name="typeService">
 	        				 <option value ="">choissez un type de service</option>
 	         				 <option value ="service_demande">Service demande</option>
@@ -20,7 +20,7 @@
 			 Localisation de service: <input type="text" name="localisationService" /><br>
 			 Description de service: <input type="text" name="description" /><br>
 			 Description détail de service: <input type="text" name="descriptionDetail" /><br>
-			 Date valide de service: <input type="Date" name="dateValidDemande" /><br>
+			 Date valide de service: <input type="Date" name="dateValidOffert" /><br>
 			 
 	        <input type="submit" value = "Recherche"/><br>
 	    </form>

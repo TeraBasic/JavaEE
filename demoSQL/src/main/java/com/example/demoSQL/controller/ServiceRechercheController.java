@@ -28,7 +28,7 @@ public class ServiceRechercheController {
 	private RechercheService rechercheService;
 	
 	@RequestMapping(value="rechercheDemande", method = RequestMethod.GET)
-	public String showRecherchePage(ModelMap model, HttpSession session){
+	public String showRechercheDemandePage(ModelMap model, HttpSession session){
 		//model.put("id", serviceId);
 		if(session.getAttribute("userId")==null) {
 			return "redirect:/login";
@@ -37,31 +37,39 @@ public class ServiceRechercheController {
 		
 		return "rechercheDemande";
 	}
+	@RequestMapping(value="rechercheOffer", method = RequestMethod.GET)
+	public String showRechercheOffertPage(ModelMap model, HttpSession session){
+		//model.put("id", serviceId);
+		if(session.getAttribute("userId")==null) {
+			return "redirect:/login";
+    	}
+		model.put("id", session.getAttribute("userId"));
+		
+		return "rechercheOffer";
+	}
 	
-	@RequestMapping(value="recherche/infoDeRechercheDemande", method = RequestMethod.POST)
+	@RequestMapping(value="infoDeRechercheDemande", method = RequestMethod.POST)
 	public String showInfoDeRechercheDemande(ModelMap model, HttpSession session, @RequestParam String idDemande, @RequestParam String typeService,@RequestParam String natureService,@RequestParam String compteId,@RequestParam String localisationService, @RequestParam String description,@RequestParam String descriptionDetail, @RequestParam String dateValidDemande ){
 		List<DemandeDo> d = new ArrayList<DemandeDo>();
 		
 		if (idDemande!=null&&!idDemande.equals("")) {
 			DemandeDo de = this.rechercheService.getOneDemandeById(Long. parseLong(idDemande));
 			d.add(de);
-			System.out.println(idDemande);
-			System.out.println(de.getDescription());
+			//System.out.println(idDemande);
+			//System.out.println(de.getDescription());
 		}
 		if (typeService!=null&&!typeService.equals("")) {
-			System.out.println("diaonima");
+			//System.out.println("diaonima");
 			d=retainList(d,this.rechercheService.getOneDemandeByTypeService(typeService));
 			
 		}
 		
 		if (natureService!=null&&!natureService.equals("")) {
-			System.out.println("kk");
-			// List<DemandeDo> d = this.rechercheService.getOneDemandeByNatureService(natureService);
+			//System.out.println("kk");
 			d=retainList(d,this.rechercheService.getOneDemandeByNatureService(natureService));
 			
 		}
 		if (compteId!=null&&!compteId.equals("")) {
-			// List<DemandeDo> d = this.rechercheService.getOneDemandeByUserCompte(compteId);
 			d=retainList(d,this.rechercheService.getOneDemandeByUserCompte(compteId));
 		}
 		if (localisationService!=null&&!localisationService.equals("")) {
@@ -82,7 +90,59 @@ public class ServiceRechercheController {
 		
 		return "infoDeRechercheDemande";
 	}
+	@RequestMapping(value="infoDeRechercheOffer", method = RequestMethod.POST)
+	public String showInfoDeRechercheOffert(ModelMap model, HttpSession session, @RequestParam String idOffert, @RequestParam String typeService,@RequestParam String natureService,@RequestParam String compteId,@RequestParam String localisationService, @RequestParam String description,@RequestParam String descriptionDetail, @RequestParam String dateValidOffert ){
+		List<OfferDo> d = new ArrayList<OfferDo>();
+		
+		if (idOffert!=null&&!idOffert.equals("")) {
+			OfferDo de = this.rechercheService.getOneOffertById(Long. parseLong(idOffert));
+			d.add(de);
+			//System.out.println(idDemande);
+			//System.out.println(de.getDescription());
+		}
+		if (typeService!=null&&!typeService.equals("")) {
+			d=retainListOffert(d,this.rechercheService.getOneOffertByTypeService(typeService));
+			
+		}
+		
+		if (natureService!=null&&!natureService.equals("")) {
+			System.out.println("kk");
+			d=retainListOffert(d,this.rechercheService.getOneOffertByNatureService(natureService));
+			
+		}
+		if (compteId!=null&&!compteId.equals("")) {
+			d=retainListOffert(d,this.rechercheService.getOneOffertByUserCompte(compteId));
+		}
+		if (localisationService!=null&&!localisationService.equals("")) {
+			d=retainListOffert(d,this.rechercheService.getOneOffertByLocalisationService(localisationService));
+		}
+		if (description!=null&&!description.equals("")) {
+			d=retainListOffert(d,this.rechercheService.getOneOffertByDescrption(description));
+		}
+		if (descriptionDetail!=null&&!descriptionDetail.equals("")) {
+			
+			d=retainListOffert(d,this.rechercheService.getOneOffertByDescriptionDetail(descriptionDetail));
+		}
+		if (dateValidOffert!=null&&!dateValidOffert.equals("")) {
+			Date date=Date.valueOf(dateValidOffert);
+			d=retainListOffert(d,this.rechercheService.getOneOffertByDateValidOffert(date));
+		}
+		model.put("offerList", d);
+		
+		return "infoDeRechercheOffer";
+	}
+	
 	public List<DemandeDo> retainList (List<DemandeDo> d1,List<DemandeDo> d2){
+		if(d1.size()==0) {
+			d1.addAll(d2);
+			
+		}else {
+			d1.retainAll(d2);
+		}
+		return d1;
+	}
+	
+	public List<OfferDo> retainListOffert (List<OfferDo> d1,List<OfferDo> d2){
 		if(d1.size()==0) {
 			d1.addAll(d2);
 			

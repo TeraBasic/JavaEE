@@ -13,12 +13,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demoSQL.domain.DemandeDo;
+import com.example.demoSQL.domain.OfferDo;
 import com.example.demoSQL.domain.UserDo;
 
 @Service
 public class RechercheService {
 	@Autowired
     private DemandeDao DemandeDao;
+	@Autowired
+    private OfferDao OfferDao;
+	
 	@PersistenceContext
     private EntityManager entityManager;
 
@@ -29,31 +33,52 @@ public class RechercheService {
 		return this.DemandeDao.findByTypeService(typeService);
 	}
 	public List<DemandeDo> getOneDemandeByNatureService(String natureService) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByNatureService(natureService);
 	}
 	public List<DemandeDo> getOneDemandeByUserCompte(String compteId) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByUserCompte(compteId);
 	}
 	public List<DemandeDo> getOneDemandeByDescrption(String description) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByDescription(description);
 	}
 	public List<DemandeDo> getOneDemandeByLocalisationService(String localisationService) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByLocalisationService(localisationService);
 		
 	}
 	
 	public List<DemandeDo> getOneDemandeByDescriptionDetail(String descriptionDetail) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByDescriptionDetail(descriptionDetail);
 		
 	}
 	public List<DemandeDo> getOneDemandeByDateValidDemande(Date dateValidDemande) {
-		// TODO Auto-generated method stub
 		return this.DemandeDao.findByDateValidDemande(dateValidDemande);
+		
+	}
+	
+	public OfferDo getOneOffertById(Long id){
+		return this.OfferDao.getOne(id);
+	}
+	public List<OfferDo> getOneOffertByTypeService(String typeService) {
+		return this.OfferDao.findByTypeService(typeService);
+	}
+	public List<OfferDo> getOneOffertByNatureService(String natureService) {
+		return this.OfferDao.findByNatureService(natureService);
+	}
+	public List<OfferDo> getOneOffertByUserCompte(String compteId) {
+		return this.OfferDao.findByUserCompte(compteId);
+	}
+	public List<OfferDo> getOneOffertByDescrption(String description) {
+		return this.OfferDao.findByDescription(description);
+	}
+	public List<OfferDo> getOneOffertByLocalisationService(String localisationService) {
+		return this.OfferDao.findByLocalisationService(localisationService);
+		
+	}
+	public List<OfferDo> getOneOffertByDescriptionDetail(String descriptionDetail) {
+		return this.OfferDao.findByDescriptionDetail(descriptionDetail);	
+	}
+	public List<OfferDo> getOneOffertByDateValidOffert(Date dateValidOffert) {
+		return this.OfferDao.findByDateOffert(dateValidOffert);
 		
 	}
 }
