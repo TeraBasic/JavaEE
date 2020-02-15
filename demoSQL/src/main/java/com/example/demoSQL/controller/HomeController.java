@@ -86,7 +86,7 @@ public class HomeController {
     }
 	
 	@RequestMapping(value="demande/addDemandeSuccess", method = RequestMethod.POST)
-    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam Date dateValidDemande, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
+    public String addDemandes(ModelMap model,@RequestParam String nomService, @RequestParam String typeService,@RequestParam String natureService, @RequestParam String dateValidDemande, @RequestParam String description, @RequestParam String descriptionDetail,@RequestParam String localisationService, HttpSession session){
 		if(session.getAttribute("userId")==null) {
 			return "redirect:/login";
     	}
@@ -102,7 +102,10 @@ public class HomeController {
         demande.setLocalisationService(localisationService);
         demande.setEtatService(etatService);
         demande.setDescription(description);
-        demande.setDateValidDemande(dateValidDemande);
+        if(dateValidDemande!=null&&!dateValidDemande.equals("")) {
+        	Date date=Date.valueOf(dateValidDemande);
+        	demande.setDateValidDemande(date);
+        }
         demande.setDescriptionDetail(descriptionDetail);
         this.demandeService.stockDemande(demande);
         return "addDemandeSuccess";
