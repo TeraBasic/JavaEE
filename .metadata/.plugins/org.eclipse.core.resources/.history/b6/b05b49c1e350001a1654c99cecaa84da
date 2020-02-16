@@ -24,17 +24,15 @@ table, th, td {
   <a href="login" class="btn btn-default"># Login #</a>
   <a href="creerCompte" class="btn btn-default">-----# Create compte#</a>
   <a href="home" class="btn btn-default">-----# Home #</a>
+<<<<<<< HEAD
   <a href="notification" class="btn btn-default">-----# Notification #</a>
- 
- </li>
-</ul>
   
-<ul>
-<li>
- <a href="rechercheDemande" class="btn btn-default">-----# Recherche Demande #</a>
- <a href="rechercheOffer" class="btn btn-default">-----# Recherche Offer #</a>
-</li>
-</ul>
+=======
+  <a href="rechercheDemande" class="btn btn-default">-----# Recherche Demande #</a>
+  <a href="rechercheOffer" class="btn btn-default">-----# Recherche Offer #</a>
+>>>>>>> bf7b0e5d3c4842760e63ddb3b132dcd4e015f7e5
+ </li>
+</ul>  
 
 
 <h2>Offer</h2>

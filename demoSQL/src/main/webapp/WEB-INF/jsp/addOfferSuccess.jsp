@@ -6,6 +6,5 @@
 <body>
     <p> Add offer successful </p>
 	<a href="${pageContext.request.contextPath}/index">Index</a>
-	<a href="${pageContext.request.contextPath}/rechercheOffer">Recherche Offert</a><br/>
 </body>
 </html>

@@ -25,16 +25,10 @@ table, th, td {
   <a href="creerCompte" class="btn btn-default">-----# Create compte#</a>
   <a href="home" class="btn btn-default">-----# Home #</a>
   <a href="notification" class="btn btn-default">-----# Notification #</a>
- 
+  <a href="rechercheDemande" class="btn btn-default">-----# Recherche Demande #</a>
+  <a href="rechercheOffer" class="btn btn-default">-----# Recherche Offer #</a>
  </li>
-</ul>
-  
-<ul>
-<li>
- <a href="rechercheDemande" class="btn btn-default">-----# Recherche Demande #</a>
- <a href="rechercheOffer" class="btn btn-default">-----# Recherche Offer #</a>
-</li>
-</ul>
+</ul>  
 
 
 <h2>Offer</h2>
