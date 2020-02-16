@@ -22,8 +22,10 @@ table, th, td {
 <ul style="list-style-type:disc">
  <li>
   <a href="login" class="btn btn-default"># Login #</a>
-  <a href="creerCompte" class="btn btn-default">-----# Create count #</a>
+  <a href="creerCompte" class="btn btn-default">-----# Create compte#</a>
   <a href="home" class="btn btn-default">-----# Home #</a>
+  <a href="rechercheDemande" class="btn btn-default">-----# Recherche Demande #</a>
+  <a href="rechercheOffer" class="btn btn-default">-----# Recherche Offer #</a>
  </li>
 </ul>  
 
