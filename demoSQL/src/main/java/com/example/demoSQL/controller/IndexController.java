@@ -10,9 +10,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demoSQL.domain.AcceptionServiceDo;
 import com.example.demoSQL.domain.DemandeDo;
 import com.example.demoSQL.domain.OfferDo;
+import com.example.demoSQL.domain.PropositionServiceDo;
 import com.example.demoSQL.domain.UserDo;
+import com.example.demoSQL.service.ContractService;
 import com.example.demoSQL.service.LogInService;
 import com.example.demoSQL.service.OfferDemandService;
 
@@ -22,6 +26,8 @@ public class IndexController {
 	private OfferDemandService offerDemandService;
 	@Autowired
     LogInService loginService;
+	@Autowired
+	ContractService conser;
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
     public String showService(ModelMap model){
@@ -89,5 +95,20 @@ public class IndexController {
     	this.loginService.stockUser(ud);   	
     	return "home";
     }
+    
+    @RequestMapping(value="notification", method = RequestMethod.GET)
+    public String showNotification(ModelMap model, HttpSession session) {
+    	if(session.getAttribute("userId")==null) {
+    		return "login";	
+    	}
+    	
+    	List<PropositionServiceDo> listPro = conser.getPrositions(session.getAttribute("userId").toString());
+    	List<AcceptionServiceDo> listAcc = conser.getAcception(session.getAttribute("userId").toString());
+    	model.addAttribute("listpropositionService", listPro);
+    	model.addAttribute("listAcc", listAcc);
+    	
+        return "notification";
+    }
+    
 
 }

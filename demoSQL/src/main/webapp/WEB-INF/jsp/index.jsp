@@ -24,6 +24,8 @@ table, th, td {
   <a href="login" class="btn btn-default"># Login #</a>
   <a href="creerCompte" class="btn btn-default">-----# Create count #</a>
   <a href="home" class="btn btn-default">-----# Home #</a>
+  <a href="notification" class="btn btn-default">-----# Notification #</a>
+  
  </li>
 </ul>  
 

@@ -8,3 +8,8 @@
 1581697534547	Rename resource 'proposeSuccess.jsp'
 1581699802989	Rename resource 'proposeOffer.jsp'
 1581699821305	Rename resource 'proposeOfferSuccess.jsp'
+1581848378336	Rename type 'ServiceDetailController'
+1581850294782	Rename resource 'DetailPersonInfo.jsp'
+1581871164788	Delete element
+1581871174837	Rename type 'AcceptionService'
+1581873385339	Rename resource 'AcceptionService.jsp'

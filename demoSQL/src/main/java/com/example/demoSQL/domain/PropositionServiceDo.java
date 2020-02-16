@@ -17,16 +17,16 @@ public class PropositionServiceDo {
 	@Column(length = 256)
 	private String message;
 	
-	public Long getServiceId() {
+	public Long getServiceDemandeId() {
 		return this.serviceDemandeId;
 	}
-	public void setServiceId(Long id) {
+	public void setServiceDemandeId(Long id) {
 		this.serviceDemandeId = id; 
 	}
-	public String getCompte() {
+	public String getDemandCompte() {
 		return this.demandCompte;
 	}
-	public void setCompte(String compte) {
+	public void setDemandCompte(String compte) {
 		this.demandCompte = compte;
 	}
 	public String getProposeCompte() {
