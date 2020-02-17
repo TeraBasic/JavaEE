@@ -12,6 +12,7 @@
 	<table border="1">
 		<tr>
                 <td>Référence</td>
+                <td>Nom</td>
                 <td>Type</td>
                 <td>Nature</td>
                 <td>Utilisateur</td>
@@ -23,6 +24,7 @@
         </tr>
 		<tr class="text-info">
 	                    <td>${offer.offerId}</td>
+	                    <td>${offer.nomService}</td> 
 	                    <td>${offer.typeService}</td>
 	                    <td>${offer.natureService}</td>
 	                    <td>${offer.compteId}</td>

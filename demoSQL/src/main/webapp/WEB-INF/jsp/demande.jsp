@@ -5,10 +5,11 @@
 </head>
 <body>
 	<div align='center'>
+		<font color="red">${errorMessage}</font>
 	    <p> Demande Service </p>
 	    <p> Welcome ${id}!! </p>
-		<form action= "demande/addDemandeSuccess" method="post">
-	        nom de service : <input type="text" name="nomService" required /><br>
+		<form action= "/demande/addDemandeSuccess" method="post">
+	        nom de service : <input type="text" name="nomService"><br>
 	        type de service: <select name="typeService">
 	         				 <option value ="service_demande">Service demande</option>
   			 				 <option value ="louer">Objet a louer</option>
