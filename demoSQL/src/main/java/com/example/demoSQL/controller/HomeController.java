@@ -90,6 +90,11 @@ public class HomeController {
 		if(session.getAttribute("userId")==null) {
 			return "redirect:/login";
     	}
+		boolean checkDate = DemandeService.checkDate(dateValidDemande);
+    	if (!checkDate) {
+             model.put("errorMessage", "date error");
+             return "demande";
+        }
 		String etatService="A VALIDER";
 		DemandeDo demande = new DemandeDo();
 		serviceDemandeId++;
@@ -127,7 +132,11 @@ public class HomeController {
 		if(session.getAttribute("userId")==null) {
     		return "login";	
     	}
-		
+		boolean checkDate = DemandeService.checkDate(dateValidOffert);
+    	if (!checkDate) {
+             model.put("errorMessage", "date error");
+             return "offer";
+        }
 		OfferDo offer = new OfferDo();
 		offerID++;
 		String userId = (String) session.getAttribute("userId");

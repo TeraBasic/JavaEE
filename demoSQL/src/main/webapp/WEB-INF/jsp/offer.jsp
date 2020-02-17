@@ -5,9 +5,10 @@
 </head>
 <body>
 	<center>
+	<font color="red">${errorMessage}</font>
     <p> Offer Service </p>
     <p> Welcome ${id}!! </p>
-	<form action= "offer/addOfferSuccesful" method="post">
+	<form action= "/offer/addOfferSuccesful" method="post">
         nom de service : <input type="text" name="nomService" /><br>
         type de service: <input type="text" name="typeService" /><br>
         nature de service : <input type="text" name="natureService" /><br>

@@ -82,6 +82,11 @@ public class IndexController {
     
     @RequestMapping(value="creerCompte", method = RequestMethod.POST)
     public String creerCompte(ModelMap model,@RequestParam String userId,@RequestParam String password,@RequestParam String nom,@RequestParam String prenom,@RequestParam String pseudonyme,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description) {
+    	boolean registerValid = loginService.registerValid(nom, prenom,telephone,userId);
+    	if (!registerValid) {
+             model.put("errorMessage", "information input error");
+             return "reg";
+        }
     	UserDo ud = new UserDo();
     	ud.setId(userId);
     	ud.setPassWord(password);
