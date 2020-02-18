@@ -29,31 +29,42 @@ public class LogInService {
 		return userDo.getPassword().equals(password);
 		//return true;
 	}
-	public boolean registerValid(String nom, String prenom, String telephone, String email) {
-		boolean fnom=true, fprenom=true, ftelephone=true, femail=true;
-		String pattern1 = "^([a-z0-9A-Z]+[-|//.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?//.)+[a-zA-Z]{2,}$"; 
+	public boolean registerValid(String id, String nom, String prenom, String telephone, String email) {
+		boolean fnom=true, fprenom=true, ftelephone=true, femail=true, fid=true ;
+		
+		
+		//check the email already exist or not
+		UserDo userDo = entityManager.find(UserDo.class, id);
+	    fid = !(userDo.getUserId().equals(id));
+	   
+	    //check the email format
+	    String pattern1 = "^([a-z0-9A-Z]+[-|//.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?//.)+[a-zA-Z]{2,}$"; 
 		Pattern pattern = Pattern.compile(pattern1); 
 		Matcher mat = pattern.matcher(email); 
+	    
 		if (!mat.matches()) { 
             femail = false; 
         } 
+		//check telephone format
 		for (int i = 0; i < telephone.length(); i++) {
             if (!Character.isDigit(telephone.charAt(i))) {
                 ftelephone=false;
             }
         }
+		//check nom format
 		for (int i = 0; i < nom.length(); i++) {
             if (!Character.isLetter(nom.charAt(i))) {
                 fnom=false;
             }
         }
+		//check prenom format
 		for (int i = 0; i < prenom.length(); i++) {
             if (!Character.isLetter(prenom.charAt(i))) {
                 fprenom=false;
             }
         }
 		
-		return fnom&&fprenom&&ftelephone&&femail;
+		return fnom&&fprenom&&ftelephone&&femail&&fid;
 	}
 	public void stockUser(UserDo ud) {
 		userDao.save(ud);

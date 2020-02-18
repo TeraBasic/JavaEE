@@ -34,6 +34,7 @@ public class GererCompteService {
 	public boolean modifieValid(String telephone) {
 		boolean ftelephone=true;
 		
+		//check telephone format
 		for (int i = 0; i < telephone.length(); i++) {
             if (!Character.isDigit(telephone.charAt(i))) {
                 ftelephone=false;

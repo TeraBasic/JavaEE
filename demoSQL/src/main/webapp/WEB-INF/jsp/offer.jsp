@@ -10,7 +10,11 @@
     <p> Welcome ${id}!! </p>
 	<form action= "/offer/addOfferSuccesful" method="post">
         nom de service : <input type="text" name="nomService" /><br>
-        type de service: <input type="text" name="typeService" /><br>
+        type de service: <select name="typeService">
+	         				 <option value ="service_demande">Service demande</option>
+  			 				 <option value ="louer">Objet a louer</option>
+  							 <option value="obtenir">Objet a obtenir</option>
+			 				 </select><br>
         nature de service : <input type="text" name="natureService" /><br>
         date valid offer: <input id="date" type="Date" name="dateValidOffert"><br>
         description : <input type="text" name="description" /><br>
