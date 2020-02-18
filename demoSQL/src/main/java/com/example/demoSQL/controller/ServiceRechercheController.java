@@ -28,22 +28,12 @@ public class ServiceRechercheController {
 	private RechercheService rechercheService;
 	
 	@RequestMapping(value="rechercheDemande", method = RequestMethod.GET)
-	public String showRechercheDemandePage(ModelMap model, HttpSession session){
-		//model.put("id", serviceId);
-		if(session.getAttribute("userId")==null) {
-			return "redirect:/login";
-    	}
-		model.put("id", session.getAttribute("userId"));
+	public String showRechercheDemandePage(ModelMap model){
 		
 		return "rechercheDemande";
 	}
 	@RequestMapping(value="rechercheOffer", method = RequestMethod.GET)
 	public String showRechercheOffertPage(ModelMap model, HttpSession session){
-		//model.put("id", serviceId);
-		if(session.getAttribute("userId")==null) {
-			return "redirect:/login";
-    	}
-		model.put("id", session.getAttribute("userId"));
 		
 		return "rechercheOffer";
 	}

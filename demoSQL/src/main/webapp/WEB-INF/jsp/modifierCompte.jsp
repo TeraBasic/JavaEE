@@ -7,14 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<font color="red">${errorMessage}</font>
 	<h2>Modifier les informations de compte</h2>
-    <form action= "modifieCompteSuccess" method="post">
-         Nom : <input type="text" name="nom" /><br>
-         Prenom : <input type="text" name="prenom" /><br>
-         Pseudonyme : <input type="text" name="pseudonyme" /><br>
+    <form action= "/modifieCompteSuccess" method="post">
          Addresse : <input type="text" name="adresse" /><br>
          Telephone : <input type="text" name="telephone" /><br>
-         Description : <input type="text" name="description" /><br>      
+         Description : <input type="text" name="description" /><br>  
+         Mot de passe: <input type="text" name="mdp" /><br>  
         <input type="submit" value = "Submit"/><br>
     </form>
 	

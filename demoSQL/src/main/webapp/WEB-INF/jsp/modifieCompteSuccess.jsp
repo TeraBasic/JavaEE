@@ -11,18 +11,24 @@
         
         <table border="1">
             <tr>
+            	<td>User ID</td>
                 <td>Nom</td>
                 <td>Prénom</td>
                 <td>Téléphone</td>
                 <td>Adresse</td>
+                <td>Pseudonyme</td>
+                <td>Description</td>
                 
             </tr>
             
-		        <tr class="text-info">
+		        <tr>
+		         <td>${userCompte.userId}</td>
 		         <td>${userCompte.nom}</td>
 		         <td>${userCompte.prenom}</td>
 		         <td>${userCompte.telephone}</td>
-		         <td>${userCompte.adresse}</td>                
+		         <td>${userCompte.adresse}</td>
+		         <td>${userCompte.pseudonyme}</td>
+		         <td>${userCompte.description}</td>                
 		    </tr>
            
         </table>

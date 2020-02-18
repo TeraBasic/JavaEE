@@ -2,6 +2,8 @@ package com.example.demoSQL.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,5 +30,16 @@ public class GererCompteService {
 	
 	public List<UserDo> getAllUser(){
 		return this.userDao.findAll();
+	}
+	public boolean modifieValid(String telephone) {
+		boolean ftelephone=true;
+		
+		for (int i = 0; i < telephone.length(); i++) {
+            if (!Character.isDigit(telephone.charAt(i))) {
+                ftelephone=false;
+            }
+		}
+		return ftelephone;
+		
 	}
 }

@@ -82,7 +82,7 @@ public class IndexController {
              return "reg";
         }
     	UserDo ud = new UserDo();
-    	ud.setId(userId);
+    	ud.setUserId(userId);
     	ud.setPassWord(password);
     	ud.setNom(nom);
     	ud.setPrenom(prenom);
