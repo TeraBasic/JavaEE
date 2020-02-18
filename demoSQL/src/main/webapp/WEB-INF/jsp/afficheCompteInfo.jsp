@@ -27,6 +27,7 @@ table, th, td {
                 <td>Adresse</td>
                 <td>Pseudonyme</td>
                 <td>Description</td>
+                <td>Mot de passe</td>
                 
             </tr>
             
@@ -37,7 +38,9 @@ table, th, td {
 		         <td>${userCompte.telephone}</td>
 		         <td>${userCompte.adresse}</td>
 		         <td>${userCompte.pseudonyme}</td>
-		         <td>${userCompte.description}</td>                
+		         <td>${userCompte.description}</td>
+		         <td>${userCompte.password}</td>  
+		                        
 		    </tr>
            
         </table>

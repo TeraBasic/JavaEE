@@ -35,7 +35,7 @@ public class Application {
 		userDo.setTelephone("123324525");
 		userDo.setAdresse("46 desborde valmeir");
 		userDo.setDescription("etudiant daupohie");
-		userDo.setPassWord("1442424");
+		userDo.setPassword("1442424");
 		userDo.setUserType("administrateur");
         userDao.save(userDo);
         
@@ -47,7 +47,7 @@ public class Application {
 		userDo.setTelephone("5567666666");
 		userDo.setAdresse("la defenfes");
 		userDo.setDescription("hehhehehe");
-		userDo.setPassWord("123456");
+		userDo.setPassword("123456");
 		userDo.setUserType("administrateur");
         userDao.save(userDo);
         
@@ -59,7 +59,7 @@ public class Application {
 		userDo.setTelephone("678999");
 		userDo.setAdresse("la france terre");
 		userDo.setDescription("meieihehee");
-		userDo.setPassWord("88888");
+		userDo.setPassword("88888");
 		userDo.setUserType("administrateur");
         userDao.save(userDo);
 		

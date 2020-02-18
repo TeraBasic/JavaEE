@@ -83,7 +83,7 @@ public class IndexController {
         }
     	UserDo ud = new UserDo();
     	ud.setUserId(userId);
-    	ud.setPassWord(password);
+    	ud.setPassword(password);
     	ud.setNom(nom);
     	ud.setPrenom(prenom);
     	ud.setPseudonyme(pseudonyme);

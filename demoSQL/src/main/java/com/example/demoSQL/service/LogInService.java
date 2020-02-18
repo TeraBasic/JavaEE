@@ -26,7 +26,7 @@ public class LogInService {
 	public boolean validateUser(String id, String password) {
 		//UserDo userDo = userDao.getOne(id);
 		UserDo userDo = entityManager.find(UserDo.class, id);
-		return userDo.getPassWord().equals(password);
+		return userDo.getPassword().equals(password);
 		//return true;
 	}
 	public boolean registerValid(String nom, String prenom, String telephone, String email) {

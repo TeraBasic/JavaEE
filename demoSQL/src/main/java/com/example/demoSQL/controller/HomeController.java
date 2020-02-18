@@ -68,6 +68,9 @@ public class HomeController {
     	if (description!=null&&!description.equals("")) {
     		ud.setDescription(description);
     	}
+    	if (mdp!=null&&!mdp.equals("")) {
+    		ud.setPassword(mdp);
+    	}
     	
     	model.put("userCompte", ud);
     	this.gererCompte.updateUser(ud);   	
