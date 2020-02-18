@@ -37,10 +37,10 @@ public class UserDo {
     @Column(length = 32)
     private String userType;
     
-    public String getId() {
+    public String getUserId() {
     	return this.userId;
     }
-    public void setId(String id) {
+    public void setUserId(String id) {
     	this.userId=id;
     }
     public String getPassWord() {
