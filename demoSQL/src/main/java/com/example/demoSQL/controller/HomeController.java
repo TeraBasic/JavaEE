@@ -37,22 +37,29 @@ public class HomeController {
 		model.put("id", session.getAttribute("userId"));
 		return "modifierCompte";
     }
-	
+
+	@RequestMapping(value="afficheCompteInfo", method = RequestMethod.GET)
+    public String showLoginPage(ModelMap model, HttpSession session){
+		String id= (String) session.getAttribute("userId");
+		UserDo userCompte = this.gererCompte.getOneUser(id);
+		System.out.println(userCompte.getUserId());
+        model.put("userCompte", userCompte);
+        
+		return "afficheCompteInfo";
+    }
 	@RequestMapping(value="modifieCompteSuccess", method = RequestMethod.POST)
-    public String modifieCompte(ModelMap model,HttpSession session, @RequestParam String nom,@RequestParam String prenom,@RequestParam String pseudonyme,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description) {
+    public String modifieCompte(ModelMap model,HttpSession session,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description, @RequestParam String mdp) {
 		String id= (String) session.getAttribute("userId");
 		UserDo ud= this.gererCompte.getOneUser(id);
+		
+		boolean modifieValid = gererCompte.modifieValid(telephone);
+    	if (!modifieValid ) {
+             model.put("errorMessage", "input error");
+             return "modifierCompte";
+        }
+		
+		ud.setUserId(id);
     	
-    	ud.setId(id);
-    	if (nom!=null&&!nom.equals("")) {
-    		ud.setNom(nom);
-    	}
-    	if (prenom!=null&&!prenom.equals("")) {
-    		ud.setPrenom(prenom);
-    	}
-    	if (pseudonyme!=null&&!pseudonyme.equals("")) {
-    		ud.setPseudonyme(pseudonyme);
-    	}
     	if (adresse!=null&&!adresse.equals("")) {
     		ud.setAdresse(adresse);
     	}
@@ -62,21 +69,15 @@ public class HomeController {
     	if (description!=null&&!description.equals("")) {
     		ud.setDescription(description);
     	}
+    	if (mdp!=null&&!mdp.equals("")) {
+    		ud.setPassword(mdp);
+    	}
     	
     	model.put("userCompte", ud);
     	this.gererCompte.updateUser(ud);   	
     	return "modifieCompteSuccess";
     }
 	
-	@RequestMapping(value="afficheCompteInfo", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap model, HttpSession session){
-		String id= (String) session.getAttribute("userId");
-		UserDo userCompte = this.gererCompte.getOneUser(id);
-		System.out.println(userCompte.getId());
-        model.put("userCompte", userCompte);
-        
-		return "afficheCompteInfo";
-    }
 	
 	@RequestMapping(value="demande", method = RequestMethod.GET)
 	public String showDemandePage(ModelMap model, HttpSession session){

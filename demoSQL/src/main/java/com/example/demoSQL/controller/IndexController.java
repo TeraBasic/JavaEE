@@ -92,8 +92,8 @@ public class IndexController {
              return "reg";
         }
     	UserDo ud = new UserDo();
-    	ud.setId(userId);
-    	ud.setPassWord(password);
+    	ud.setUserId(userId);
+    	ud.setPassword(password);
     	ud.setNom(nom);
     	ud.setPrenom(prenom);
     	ud.setPseudonyme(pseudonyme);
