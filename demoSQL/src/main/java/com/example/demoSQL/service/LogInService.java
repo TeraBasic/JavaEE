@@ -29,16 +29,17 @@ public class LogInService {
 		return userDo.getPassword().equals(password);
 		//return true;
 	}
-	public boolean registerValid(String id, String nom, String prenom, String telephone, String email) {
+	public boolean registerValid(String nom, String prenom, String telephone, String email) {
 		boolean fnom=true, fprenom=true, ftelephone=true, femail=true, fid=true ;
 		
 		
 		//check the email already exist or not
-		UserDo userDo = entityManager.find(UserDo.class, id);
+		/*UserDo userDo = entityManager.find(UserDo.class, id);
 	    fid = !(userDo.getUserId().equals(id));
+	    */
 	   
 	    //check the email format
-	    String pattern1 = "^([a-z0-9A-Z]+[-|//.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?//.)+[a-zA-Z]{2,}$"; 
+	    String pattern1 = "^\\w+((-\\w+)|(\\.\\w+))*@\\w+(\\.\\w{2,3}){1,3}$";
 		Pattern pattern = Pattern.compile(pattern1); 
 		Matcher mat = pattern.matcher(email); 
 	    
