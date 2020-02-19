@@ -31,12 +31,17 @@ public class LogInService {
 	}
 	public boolean registerValid(String nom, String prenom, String telephone, String email) {
 		boolean fnom=true, fprenom=true, ftelephone=true, femail=true, fid=true ;
-		
-		
+	
 		//check the email already exist or not
-		/*UserDo userDo = entityManager.find(UserDo.class, id);
-	    fid = !(userDo.getUserId().equals(id));
-	    */
+		UserDo userDo = entityManager.find(UserDo.class, email);
+		if (userDo!=null) {
+			fid = !(userDo.getUserId().equals(email));
+		}
+	    
+	    if(!fid) {
+	    	System.out.println("email exist");
+	    }
+	    
 	   
 	    //check the email format
 	    String pattern1 = "^\\w+((-\\w+)|(\\.\\w+))*@\\w+(\\.\\w{2,3}){1,3}$";
