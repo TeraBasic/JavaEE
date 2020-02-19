@@ -23,7 +23,7 @@ import com.example.demoSQL.service.OfferDemandService;
 @Controller
 public class IndexController {
 	@Autowired
-	private OfferDemandService offerDemandService;
+	private OfferDemandService oDServiece;
 	@Autowired
     LogInService loginService;
 	@Autowired
@@ -31,8 +31,8 @@ public class IndexController {
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
     public String showService(ModelMap model){
-		List<OfferDo> serviceList = this.offerDemandService.getAllOffer();
-		List<DemandeDo> demandeList = this.offerDemandService.getAllDemande();
+		List<OfferDo> serviceList = this.oDServiece.getAllOffer();
+		List<DemandeDo> demandeList = this.oDServiece.getAllDemande();
 		model.addAttribute("serviceProList", serviceList);
 		model.addAttribute("demandProList", demandeList);
 		return "index";
@@ -76,7 +76,11 @@ public class IndexController {
     	if(session.getAttribute("userId")==null) {
     		return "login";	
     	}
-    	model.put("id", session.getAttribute("userId"));
+    	String userCompte = session.getAttribute("userId").toString();
+    	model.put("id", userCompte);
+    	model.addAttribute("demandList", this.oDServiece.getAllDemandOneUser(userCompte));
+    	model.addAttribute("offerList", this.oDServiece.getAllOfferOneUser(userCompte));
+    	
         return "home";
     }
     

@@ -37,15 +37,7 @@ public class HomeController {
 		model.put("id", session.getAttribute("userId"));
 		return "modifierCompte";
     }
-	@RequestMapping(value="afficheCompteInfo", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap model, HttpSession session){
-		String id= (String) session.getAttribute("userId");
-		UserDo userCompte = this.gererCompte.getOneUser(id);
-		System.out.println(userCompte.getId());
-        model.put("userCompte", userCompte);
-        
-		return "afficheCompteInfo";
-    }
+	
 	@RequestMapping(value="modifieCompteSuccess", method = RequestMethod.POST)
     public String modifieCompte(ModelMap model,HttpSession session, @RequestParam String nom,@RequestParam String prenom,@RequestParam String pseudonyme,@RequestParam String adresse,@RequestParam String telephone,@RequestParam String description) {
 		String id= (String) session.getAttribute("userId");
@@ -74,6 +66,16 @@ public class HomeController {
     	model.put("userCompte", ud);
     	this.gererCompte.updateUser(ud);   	
     	return "modifieCompteSuccess";
+    }
+	
+	@RequestMapping(value="afficheCompteInfo", method = RequestMethod.GET)
+    public String showLoginPage(ModelMap model, HttpSession session){
+		String id= (String) session.getAttribute("userId");
+		UserDo userCompte = this.gererCompte.getOneUser(id);
+		System.out.println(userCompte.getId());
+        model.put("userCompte", userCompte);
+        
+		return "afficheCompteInfo";
     }
 	
 	@RequestMapping(value="demande", method = RequestMethod.GET)

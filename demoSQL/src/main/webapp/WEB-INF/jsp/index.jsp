@@ -83,8 +83,6 @@ table, th, td {
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailDemande/${demand.serviceDemandeId}">detail</a>
                     </td>
-                    
-                    
                 </tr>
             </c:forEach>
         </table>
