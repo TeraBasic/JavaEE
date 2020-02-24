@@ -16,7 +16,7 @@
   							 <option value="obtenir">Objet a obtenir</option>
 			 				 </select><br>
 			 Nature de service : <input type="text" name="natureService" /><br>
-			 Compte utilisateur:  <input type="text" name="compteId" /><br>
+			 Pseudonyme utilisateur:  <input type="text" name="compteId" /><br>
 			 Localisation de service: <input type="text" name="localisationService" /><br>
 			 Description de service: <input type="text" name="description" /><br>
 			 Description détail de service: <input type="text" name="descriptionDetail" /><br>

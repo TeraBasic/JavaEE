@@ -20,7 +20,10 @@ public interface DemandeDao extends JpaRepository<DemandeDo, Long> {
 	@Query("SELECT d FROM DemandeDo d WHERE d.natureService =?1")
 	public List<DemandeDo> findByNatureService(String natureService);
 	
-	@Query("SELECT d FROM DemandeDo d WHERE d.compteId =?1")
+	@Query("SELECT d FROM DemandeDo d JOIN UserDo u ON d.compteId=u.userId WHERE u.pseudonyme =?1")
+	public List<DemandeDo> findByUserPseudonyme(String pseudonyme);
+	
+	@Query("SELECT d FROM DemandeDo d  WHERE d.compteId =?1")
 	public List<DemandeDo> findByUserCompte(String compteId);
 	
 	@Query("SELECT d FROM DemandeDo d WHERE d.description =?1")

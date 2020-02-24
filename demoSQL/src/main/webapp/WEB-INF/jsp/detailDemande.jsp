@@ -15,7 +15,7 @@
                 <td>Nom</td>
                 <td>Type</td>
                 <td>Nature</td>
-                <td>Utilisateur</td>
+                <td>Utilisateur Pseudonyme</td>
                 <td>Date valid service</td>
                 <td>Localisation service</td>
                 <td>Description courte</td>
@@ -26,7 +26,7 @@
 	                    <td>${demande.nomService}</td>
 	                    <td>${demande.typeService}</td>
 	                    <td>${demande.natureService}</td>
-	                    <td>${demande.compteId}</td>
+	                    <td>${user.pseudonyme}</td>
 	                    <td>${demande.dateValidDemande}</td>
 	                    <td>${demande.localisationService}</td>
 	                    <td>${demande.descriptionDetail}</td>

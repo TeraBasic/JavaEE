@@ -60,7 +60,7 @@ public class ServiceRechercheController {
 			
 		}
 		if (compteId!=null&&!compteId.equals("")) {
-			d=retainList(d,this.rechercheService.getOneDemandeByUserCompte(compteId));
+			d=retainList(d,this.rechercheService.getOneDemandeByUserPseudonyme(compteId));
 		}
 		if (localisationService!=null&&!localisationService.equals("")) {
 			d=retainList(d,this.rechercheService.getOneDemandeByLocalisationService(localisationService));
@@ -101,7 +101,7 @@ public class ServiceRechercheController {
 			
 		}
 		if (compteId!=null&&!compteId.equals("")) {
-			d=retainListOffert(d,this.rechercheService.getOneOffertByUserCompte(compteId));
+			d=retainListOffert(d,this.rechercheService.getOneOffertByUserPseudonyme(compteId));
 		}
 		if (localisationService!=null&&!localisationService.equals("")) {
 			d=retainListOffert(d,this.rechercheService.getOneOffertByLocalisationService(localisationService));

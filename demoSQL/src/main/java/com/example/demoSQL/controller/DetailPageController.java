@@ -27,14 +27,17 @@ public class DetailPageController {
 	private OfferDemandService offerDemandService;
 	@Autowired
 	private ContractService contractService;
-	
+	@Autowired
+	private GererCompteService gererCompteService;
 	
 	@RequestMapping(value="detailDemande/{serviceId}", method = RequestMethod.GET)
 	public String showDetailDemandePage(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
 		//model.put("id", serviceId);
 		
 		DemandeDo d = this.offerDemandService.getOneDemande(serviceId);
+		UserDo u = this.gererCompteService.getOneUser(d.getCompteId());
 		model.put("demande", d);
+		model.put("user", u);
 		return "detailDemande";
 	}
 	@RequestMapping(value="detailOffer/{serviceId}", method = RequestMethod.GET)
@@ -42,7 +45,9 @@ public class DetailPageController {
 		//model.put("id", serviceId);
 		
 	    OfferDo o = this.offerDemandService.getOneOffer(serviceId);
+	    UserDo u = this.gererCompteService.getOneUser(o.getCompteId());
 		model.put("offer", o);
+		model.put("user", u);
 		return "detailOffer";
 	}
 	

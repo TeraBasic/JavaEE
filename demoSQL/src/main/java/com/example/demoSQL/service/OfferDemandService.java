@@ -30,8 +30,8 @@ public class OfferDemandService {
 		return this.dd.findAll();
 	}
 	
-	public List<DemandeDo> getAllDemandOneUser(String userCompte){
-		return this.dd.findByUserCompte(userCompte);
+	public List<DemandeDo> getAllDemandOneUser(String compteId){
+		return this.dd.findByUserCompte(compteId);
 	}
 	
 	public List<OfferDo> getAllOfferOneUser(String userCompte){
