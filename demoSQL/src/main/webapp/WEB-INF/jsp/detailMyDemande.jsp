@@ -33,7 +33,7 @@
 	                    <td>${demande.localisationService}</td>s
 	    </tr>
     </table>
-    <a href="${pageContext.request.contextPath}/modifierMyDemand/${demande.serviceDemandeId}">Modifier</a><br/>
+    <a href="${pageContext.request.contextPath}/modifierMyDemande/${demande.serviceDemandeId}">Modifier</a><br/>
     <a href="${pageContext.request.contextPath}/home">Home</a><br/>
     </div>
 </body>

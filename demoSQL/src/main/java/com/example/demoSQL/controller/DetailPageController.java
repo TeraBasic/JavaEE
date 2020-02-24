@@ -2,7 +2,6 @@ package com.example.demoSQL.controller;
 
 import java.sql.Date;
 //import java.util.Date;
-import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demoSQL.domain.AcceptionServiceDo;
 import com.example.demoSQL.domain.DemandeDo;
@@ -74,8 +72,8 @@ public class DetailPageController {
 		
 		DemandeDo d = this.offerDemandService.getOneDemande(demandeId);
 		model.put("demande", d);
-		model.put("demandeId", demandeId);
-		return "modiferMyDemande";
+		//model.put("demandeId", demandeId);
+		return "modifierMyDemande";
 	}
 	
 	@RequestMapping(value="modifierMyOffer/{offerId}", method = RequestMethod.GET)
@@ -84,11 +82,11 @@ public class DetailPageController {
 		
 		OfferDo o = this.offerDemandService.getOneOffer(offerId);
 		model.put("offer", o);
-		model.put("offerId", offerId);
+		//model.put("offerId", offerId);
 		return "modifierMyOffer";
 	}
 	
-	@RequestMapping(value="modifierMyOffer/{offerId}", method = RequestMethod.POST)
+	@RequestMapping(value="modifierMyOffer/modifierOfferSuccess", method = RequestMethod.POST)
 	public String modifierMyOffer(ModelMap model, HttpSession session, @RequestParam Long offerId,@RequestParam String compteId,
 			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
 			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService){
@@ -109,18 +107,18 @@ public class DetailPageController {
 		return "modifierSuccess";
 	}
 	
-	@RequestMapping(value="modifierMyDemande/{demandeId}", method = RequestMethod.POST)
-	public String modifierMyDemande(ModelMap model, HttpSession session, @RequestParam Long demandeId,@RequestParam String compteId,
-			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
+	@RequestMapping(value="modifierMyDemande/modifierDemandeSuccess", method = RequestMethod.POST)
+	public String modifierMyDemande(ModelMap model, HttpSession session, @RequestParam Long serviceDemandeId,@RequestParam String compteId,
+			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidDemande,
 			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService){
 		//model.put("id", serviceId);
 		DemandeDo dd = new DemandeDo();
-		dd.setServiceDemandeId(demandeId);
+		dd.setServiceDemandeId(serviceDemandeId);
 		dd.setCompteId(compteId);
 		dd.setTypeService(typeService);
 		dd.setnomService(nomService);
 		dd.setNatureService(natureService);
-		dd.setDateValidDemande(dateValidOffert);
+		dd.setDateValidDemande(dateValidDemande);
 		dd.setDescription(description);
 		dd.setDescriptionDetail(descriptionDetail);
 		dd.setLocalisationService(localisationService);
@@ -128,6 +126,9 @@ public class DetailPageController {
 		this.offerDemandService.updateDemande(dd);
 		return "modifierSuccess";
 	}
+	
+	
+	
 	/**
 	 * 
 	 * 

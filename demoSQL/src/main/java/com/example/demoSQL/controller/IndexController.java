@@ -81,6 +81,8 @@ public class IndexController {
     	model.addAttribute("demandList", this.oDServiece.getAllDemandOneUser(userCompte));
     	model.addAttribute("offerList", this.oDServiece.getAllOfferOneUser(userCompte));
     	
+    	System.out.println(this.oDServiece.getAllDemandOneUser(userCompte).size());
+    	System.out.println(this.oDServiece.getAllOfferOneUser(userCompte).size());
         return "home";
     }
     

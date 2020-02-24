@@ -29,11 +29,9 @@
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.ServiceProDoYi"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.service.ServiceProService"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.ServiceProDo"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
@@ -41,7 +39,13 @@
 <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
 <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
-<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
 <fullyQualifiedTypeName name="com.example.demoSQL.domain.DemandeDo"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.PropositionService"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.service.ContractService"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.UserDo"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.PropositionServiceDo"/>
+<fullyQualifiedTypeName name="com.example.demoSQL.domain.AcceptionServiceDo"/>
 </qualifiedTypeNameHistroy>

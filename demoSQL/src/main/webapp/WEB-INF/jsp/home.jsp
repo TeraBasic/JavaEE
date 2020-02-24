@@ -1,6 +1,9 @@
+
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -28,7 +31,7 @@
                     <td>${service.typeService}</td>
                     <td>${service.natureService}</td>
                     <td>${service.description}</td>
-                    <td>${service.etatService})</td>
+                    <td>${service.etatService}</td>
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailMyOffer/${service.offerId}">detail</a>
                     </td>
