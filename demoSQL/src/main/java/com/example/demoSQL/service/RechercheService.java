@@ -35,8 +35,8 @@ public class RechercheService {
 	public List<DemandeDo> getOneDemandeByNatureService(String natureService) {
 		return this.DemandeDao.findByNatureService(natureService);
 	}
-	public List<DemandeDo> getOneDemandeByUserCompte(String compteId) {
-		return this.DemandeDao.findByUserCompte(compteId);
+	public List<DemandeDo> getOneDemandeByUserPseudonyme(String pseudonyme) {
+		return this.DemandeDao.findByUserPseudonyme(pseudonyme);
 	}
 	public List<DemandeDo> getOneDemandeByDescrption(String description) {
 		return this.DemandeDao.findByDescription(description);
@@ -64,8 +64,8 @@ public class RechercheService {
 	public List<OfferDo> getOneOffertByNatureService(String natureService) {
 		return this.OfferDao.findByNatureService(natureService);
 	}
-	public List<OfferDo> getOneOffertByUserCompte(String compteId) {
-		return this.OfferDao.findByUserCompte(compteId);
+	public List<OfferDo> getOneOffertByUserPseudonyme(String pseudonyme) {
+		return this.OfferDao.findByUserPseudonyme(pseudonyme);
 	}
 	public List<OfferDo> getOneOffertByDescrption(String description) {
 		return this.OfferDao.findByDescription(description);

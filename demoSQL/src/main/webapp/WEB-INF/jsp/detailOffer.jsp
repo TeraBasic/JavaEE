@@ -15,7 +15,7 @@
                 <td>Nom</td>
                 <td>Type</td>
                 <td>Nature</td>
-                <td>Utilisateur</td>
+                <td>Utilisateur pseudonyme</td>
                 <td>Date valid service</td>
                 <td>Localisation service</td>
                 <td>Description courte</td>
@@ -27,7 +27,7 @@
 	                    <td>${offer.nomService}</td> 
 	                    <td>${offer.typeService}</td>
 	                    <td>${offer.natureService}</td>
-	                    <td>${offer.compteId}</td>
+	                    <td>${user.pseudonyme}</td>
 	                    <td>${offer.dateValidOffert}</td>
 	                    <td>${offer.localisationService}</td>
 	                    <td>${offer.description}</td>
