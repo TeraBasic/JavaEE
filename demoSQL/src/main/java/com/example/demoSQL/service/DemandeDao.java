@@ -38,5 +38,8 @@ public interface DemandeDao extends JpaRepository<DemandeDo, Long> {
 	@Query("SELECT d FROM DemandeDo d WHERE d.dateValidDemande =?1")
 	public List<DemandeDo> findByDateValidDemande(Date dateValidDemande);
 	
+	@Query("SELECT d FROM DemandeDo d WHERE d.etatService =?1")
+	public List<DemandeDo> findByEtatDemande(String etat);
+	
 	
 }

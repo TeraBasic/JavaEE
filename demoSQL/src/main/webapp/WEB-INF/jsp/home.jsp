@@ -24,6 +24,8 @@
                 <td>Type</td>
                 <td>Nature</td>
                 <td>Description courte</td>
+                <td>Etat</td>
+                
             </tr>
             <c:forEach var="service" items="${offerList}">
                 <tr class="text-info">
@@ -51,6 +53,7 @@
                 <td>Type</td>
                 <td>Nature</td>
                 <td>Description courte</td>
+                <td>Etat</td>
             </tr>
             <c:forEach var="demand" items="${demandList}">
                 <tr class="text-info">
@@ -58,7 +61,7 @@
                     <td>${demand.typeService}</td>
                     <td>${demand.natureService}</td>
                     <td>${demand.description}</td>
-                    <td>${damand.etatService}</td>
+                    <td>${demand.etatService}</td>
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailMyDemande/${demand.serviceDemandeId}">detail</a>
                     </td>

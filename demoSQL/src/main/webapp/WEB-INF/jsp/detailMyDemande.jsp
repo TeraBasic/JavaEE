@@ -20,6 +20,7 @@
                 <td>Localisation service</td>
                 <td>Description courte</td>
                 <td>Description détail</td>
+                <td>Etat</td>>
         </tr>
 		<tr class="text-info">
 	                    <td>${demande.serviceDemandeId}</td>
@@ -29,8 +30,9 @@
 	                    <td>${demande.compteId}</td>
 	                    <td>${demande.dateValidDemande}</td>
 	                    <td>${demande.localisationService}</td>
+	                    <td>${demande.description}</td>
 	                    <td>${demande.descriptionDetail}</td>
-	                    <td>${demande.localisationService}</td>s
+	                    <td>${demande.etatService}</td>
 	    </tr>
     </table>
     <a href="${pageContext.request.contextPath}/modifierMyDemande/${demande.serviceDemandeId}">Modifier</a><br/>

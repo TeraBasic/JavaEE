@@ -36,4 +36,7 @@ public interface OfferDao extends JpaRepository<OfferDo, Long> {
 
 	@Query("SELECT d FROM OfferDo d JOIN UserDo u ON d.compteId=u.userId WHERE u.pseudonyme =?1")
 	public List<OfferDo> findByUserPseudonyme(String pseudonyme);
+	
+	@Query("SELECT d FROM OfferDo d WHERE d.etatService =?1")
+	public List<OfferDo> findByEtatService(String etatService);
 }

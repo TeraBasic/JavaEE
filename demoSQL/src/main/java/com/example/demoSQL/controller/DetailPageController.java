@@ -175,7 +175,7 @@ public class DetailPageController {
 	@RequestMapping(value="acceptService/{offerId}/{compteId}", method = RequestMethod.GET)
 	public String showAcceptOfferPage(ModelMap model, HttpSession session, @PathVariable("offerId") Long offerId,@PathVariable("compteId") String compteId){
 		//model.put("id", serviceId);
-		if(session.getAttribute("userId")==null) {
+		if(session.getAttribute("userId")==null){
 			return "redirect:/login";
     	}
 		model.put("offerId", offerId);
