@@ -10,6 +10,17 @@ import com.example.demoSQL.domain.UserDo;
 @Repository
 public interface UserDao extends JpaRepository<UserDo, String> {
 
+	static int delete(String parameter) {
+		
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	static Object getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
 
 

@@ -29,8 +29,8 @@
 	                    <td>${user.pseudonyme}</td>
 	                    <td>${demande.dateValidDemande}</td>
 	                    <td>${demande.localisationService}</td>
+	                    <td>${demande.description}</td>
 	                    <td>${demande.descriptionDetail}</td>
-	                    <td>${demande.localisationService}</td>
 	    </tr>
     </table>
     <a href="${pageContext.request.contextPath}/proposeService/${demande.serviceDemandeId}/${demande.compteId}">Proposer Service</a><br/>

@@ -34,7 +34,10 @@ public class HomeController {
 		if(session.getAttribute("userId")==null) {
 			return "redirect:/login";
     	}
+		String id= (String) session.getAttribute("userId");
+		UserDo u = this.gererCompte.getOneUser(id);
 		model.put("id", session.getAttribute("userId"));
+		model.put("user", u);
 		return "modifierCompte";
     }
 
