@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
+	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	
 	<p> Detail for service ${serviceId}</p>
 	<div class="container">
 	<table border="1">
@@ -22,15 +28,15 @@
                 <td>Description détail</td>
         </tr>
 		<tr class="text-info">
-	                    <td>${demande.serviceDemandeId}</td>
-	                    <td>${demande.nomService}</td>
-	                    <td>${demande.typeService}</td>
-	                    <td>${demande.natureService}</td>
-	                    <td>${user.pseudonyme}</td>
-	                    <td>${demande.dateValidDemande}</td>
-	                    <td>${demande.localisationService}</td>
-	                    <td>${demande.description}</td>
-	                    <td>${demande.descriptionDetail}</td>
+                <td>${demande.serviceDemandeId}</td>
+                <td>${demande.nomService}</td>
+                <td>${demande.typeService}</td>
+                <td>${demande.natureService}</td>
+                <td>${user.pseudonyme}</td>
+                <td>${demande.dateValidDemande}</td>
+                <td>${demande.localisationService}</td>
+                <td>${demande.description}</td>
+                <td>${demande.descriptionDetail}</td>
 	    </tr>
     </table>
     <a href="${pageContext.request.contextPath}/proposeService/${demande.serviceDemandeId}/${demande.compteId}">Proposer Service</a><br/>

@@ -101,7 +101,7 @@ public class HomeController {
              model.put("errorMessage", "date error");
              return "demande";
         }
-		String etatService="A VALIDER";
+		String etatService="A_VALIDER";
 		DemandeDo demande = new DemandeDo();
 		serviceDemandeId++;
 		String userId = (String) session.getAttribute("userId");

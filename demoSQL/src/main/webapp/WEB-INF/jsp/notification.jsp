@@ -9,14 +9,20 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="home" class="btn btn-default">-----# Home #</a>
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
 <h2>Notification</h2>
 <div class="body_notification">
     <div class="container">
-        <div class="alert alert-success text-center" role="alert">Somemeone propose service</div>
-        <table class="table table-striped table-bordered">
+        <div class="alert alert-success text-center" role="alert">Someone propose service</div>
+        <table border="1">
             <tr>
                 <td>Demande ID</td>
-                <td>Demand Compte</td>
+                <td>Demande Compte</td>
                 <td>Propose Compte</td>
                 <td>Message</td>
             </tr>
@@ -36,14 +42,16 @@
     </div>
 </div>
 
+<br/>
+
 <div class="body_notification">
     <div class="container">
         <div class="alert alert-success text-center" role="alert"> Someone accept service</div>
-        <table class="table table-striped table-bordered">
+        <table border="1">
             <tr>
                 <td>Offer ID</td>
                 <td>Offer Compte</td>
-                <td>Offer Compte</td>
+                <td>Accept Compte</td>
                 <td>Message</td>
             </tr>
             <c:forEach var="acc" items="${listAcc}">

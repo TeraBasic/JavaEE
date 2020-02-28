@@ -2,6 +2,10 @@
 <head>
 <title>Creation du compte</title>
 </head>
+<body>
+<!-- barre de menu -->
+<a href="index" class="btn btn-default"># index #</a>
+	  	
     <font color="red">${errorMessage}</font>
     <h2>Creer un compte</h2>
     <form action= "creerCompte" method="post">

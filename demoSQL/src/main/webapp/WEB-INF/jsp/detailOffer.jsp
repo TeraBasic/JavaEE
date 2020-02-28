@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
+	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	
 	<p> Detail for service ${serviceId}</p>
 	<div class="container">
 	<table border="1">
@@ -35,7 +41,6 @@
 	    </tr>
     </table>
      <a href="${pageContext.request.contextPath}/acceptService/${offer.offerId}/${offer.compteId}">Accepter Service</a><br/>
-    <a href="${pageContext.request.contextPath}/index">Index</a><br/>
     </div>
 </body>
 </html>

@@ -4,7 +4,14 @@
 <title>Demande Service</title>
 </head>
 <body>
-    <p> Add demande sucess </p>
+	<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="home" class="btn btn-default">-----# Home #</a>
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
+	  
+    <h1> Add demande sucess </h1>
 	<a href="${pageContext.request.contextPath}/index">Index</a>	
 </body>
 </html>

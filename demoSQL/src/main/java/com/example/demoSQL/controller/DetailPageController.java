@@ -59,7 +59,9 @@ public class DetailPageController {
 		//model.put("id", serviceId);
 		
 		DemandeDo d = this.offerDemandService.getOneDemande(demandeId);
+		UserDo u = this.gererCompteService.getOneUser(d.getCompteId());
 		model.put("demande", d);
+		model.put("user", u);
 		return "detailMyDemande";
 	}
 	@RequestMapping(value="detailMyOffer/{offerId}", method = RequestMethod.GET)
@@ -67,7 +69,9 @@ public class DetailPageController {
 		//model.put("id", serviceId);
 		
 	    OfferDo o = this.offerDemandService.getOneOffer(offerId);
+	    UserDo u = this.gererCompteService.getOneUser(o.getCompteId());
 		model.put("offer", o);
+		model.put("user", u);
 		return "detailMyOffer";
 	}
 	
@@ -81,8 +85,11 @@ public class DetailPageController {
 		return "modifierMyDemande";
 	}
 	
-	@RequestMapping(value="modifierMyOffer/{offerId}", method = RequestMethod.GET)
-	public String modifierMyOfferPage(ModelMap model, HttpSession session, @PathVariable("offerId") Long offerId){
+	//没改完
+	@RequestMapping(value="modifierMyOffer/{offerId}/{compteId}", method = RequestMethod.POST)
+	public String modifierMyOfferPage(ModelMap model, HttpSession session, @PathVariable("offerId") Long offerId, @PathVariable("compteId") String compte,
+			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
+			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
 		//model.put("id", serviceId);
 		
 		OfferDo o = this.offerDemandService.getOneOffer(offerId);
@@ -92,13 +99,11 @@ public class DetailPageController {
 	}
 	
 	@RequestMapping(value="modifierMyOffer/modifierOfferSuccess", method = RequestMethod.POST)
-	public String modifierMyOffer(ModelMap model, HttpSession session, @RequestParam Long offerId,@RequestParam String compteId,
+	public String modifierMyOffer(ModelMap model, HttpSession session, 
 			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
-			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService){
+			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
 		//model.put("id", serviceId);
 		OfferDo od = new OfferDo();
-		od.setOfferId(offerId);
-		od.setCompteId(compteId);
 		od.setTypeService(typeService);
 		od.setNomService(nomService);
 		od.setNatureService(natureService);
@@ -106,20 +111,17 @@ public class DetailPageController {
 		od.setDescription(description);
 		od.setDescriptionDetail(descriptionDetail);
 		od.setLocalisationService(localisationService);
-		od.setEtatService(etatService);
 		offerDemandService.updateOffer(od);
 		
 		return "modifierSuccess";
 	}
 	
 	@RequestMapping(value="modifierMyDemande/modifierDemandeSuccess", method = RequestMethod.POST)
-	public String modifierMyDemande(ModelMap model, HttpSession session, @RequestParam Long serviceDemandeId,@RequestParam String compteId,
+	public String modifierMyDemande(ModelMap model, HttpSession session, 
 			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidDemande,
-			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService,@RequestParam String etatService){
+			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
 		//model.put("id", serviceId);
 		DemandeDo dd = new DemandeDo();
-		dd.setServiceDemandeId(serviceDemandeId);
-		dd.setCompteId(compteId);
 		dd.setTypeService(typeService);
 		dd.setnomService(nomService);
 		dd.setNatureService(natureService);
@@ -127,7 +129,6 @@ public class DetailPageController {
 		dd.setDescription(description);
 		dd.setDescriptionDetail(descriptionDetail);
 		dd.setLocalisationService(localisationService);
-		dd.setEtatService(etatService);
 		this.offerDemandService.updateDemande(dd);
 		return "modifierSuccess";
 	}
