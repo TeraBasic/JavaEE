@@ -10,22 +10,25 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
 	<h1>Home</h1>
-	<p>You have already successfully logged in or create compte<br/>
-	
+	<p>You have already successfully logged in or create compte</p> 
 	
 <h2>My Offer</h2>
 <div class="body_offer">
     <div class="container">
-        <div class="alert alert-success text-center" role="alert"> Service proposition</div>
-        <table class="table table-striped table-bordered">
+        <div class="alert alert-success text-center" role="alert"> Services proposes</div>
+        <table border="1">
             <tr>
                 <td>Référence</td>
                 <td>Type</td>
                 <td>Nature</td>
                 <td>Description courte</td>
                 <td>Etat</td>
-                
             </tr>
             <c:forEach var="service" items="${offerList}">
                 <tr class="text-info">
@@ -46,8 +49,8 @@
 <h2>My Demande</h2>
 <div class="body_offer">
     <div class="container">
-        <div class="alert alert-success text-center" role="alert"> Service proposition</div>
-        <table class="table table-striped table-bordered">
+        <div class="alert alert-success text-center" role="alert"> Services demandes</div>
+        <table border="1">
             <tr>
                 <td>Référence</td>
                 <td>Type</td>
@@ -71,7 +74,6 @@
     </div>
 </div>
 
-	<a href="${pageContext.request.contextPath}/index">Index</a><br/></p>
 	<a href="${pageContext.request.contextPath}/demande">Demande service</a><br/></p>
 	<a href="${pageContext.request.contextPath}/offer">Offer service</a><br/></p>
 	<a href="${pageContext.request.contextPath}/afficheCompteInfo">Compte Info</a><br/></p>

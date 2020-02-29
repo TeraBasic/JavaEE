@@ -2,6 +2,8 @@
 <head>
 <title>Login ou creation du compte</title>
 </head>
+<!-- barre de menu -->
+<a href="index" class="btn btn-default"># index #</a>
 	<h1>Login</h1>
     <font color="red">${errorMessage}</font>
     <form method="post">
@@ -9,7 +11,6 @@
         Password : <input type="password" name="password" /> 
         <input type="submit" value = "Login"/>
     </form>
-    <a href="${pageContext.request.contextPath}/index">Index</a><br/>   
 </body>
 
 </html>

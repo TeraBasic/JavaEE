@@ -14,6 +14,12 @@ table, th, td {
 <title>Compte info</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
+	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	
 
 <h2>Detail person info</h2>
 <div>
@@ -24,7 +30,7 @@ table, th, td {
                 <td>Prénom</td>
                 <td>Pseudonyme</td>
                 <td>Telephone</td>
-                <td>Adress</td>
+                <td>Adresse email</td>
                 <td>Description</td>
                 
             </tr>
@@ -33,13 +39,11 @@ table, th, td {
 		         <td>${userCompte.prenom}</td>
 		         <td>${userCompte.pseudonyme}</td>
 		         <td>${userCompte.telephone}</td>
-		         <td>${userCompte.adresse}</td>
+		         <td>${userCompte.userId}</td>
 		         <td>${userCompte.description}</td>
 		    </tr>
            
         </table>
-        <a href="${pageContext.request.contextPath}/home">Home</a><br/>
-        <a href="${pageContext.request.contextPath}/index">Index</a><br/>
     </div>
 </div>
 </body>

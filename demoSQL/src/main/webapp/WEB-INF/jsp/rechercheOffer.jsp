@@ -4,9 +4,15 @@
 <title>Demande Service</title>
 </head>
 <body>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="home" class="btn btn-default">-----# Home #</a>
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
 	<div align='center'>
 	    <p> Recherche Service Offert</p>
-	    <p> Welcome ${id}!! </p>
+	    <p> Welcome ${compteId}!! </p>
 		<form action= "infoDeRechercheOffer" method="post">
 			Id de service <input type="number" name="idOffert" min="1" /><br>
 	        Type de service: <select name="typeService">

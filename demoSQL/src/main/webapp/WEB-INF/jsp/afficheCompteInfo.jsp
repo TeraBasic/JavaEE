@@ -14,8 +14,14 @@ table, th, td {
 <title>Compte info</title>
 </head>
 <body>
-
-<h2>Compte info</h2>
+<!-- barre de menu -->
+	  # Nom : ${nom} #
+	  -----# Prenom : ${prenom} #
+	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="home" class="btn btn-default">-----# Home #</a>
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
+	  
+<h1>Compte info</h1>
 <div>
     <div>
         <table>

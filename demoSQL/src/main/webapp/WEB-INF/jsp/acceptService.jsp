@@ -3,10 +3,10 @@
 <meta charset="UTF-8">
 <title>Accept Service</title>
 </head>
-<body>
+<body>  
 	<center>
-    <p> Accept Service </p>
-    <p> Welcome ${id}!! </p>
+    <h1> Accept Service </h1>
+    <p> Welcome ${compteId}!! </p>
 	<form action= "acceptService" method="post">
         Offer ID : <input type="text" name="offerId" value = "${offerId}"><br>
         Offer Compte: <input type="text" name="compteId" value = "${compteId}"><br>
