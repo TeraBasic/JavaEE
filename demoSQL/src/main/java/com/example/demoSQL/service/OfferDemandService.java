@@ -23,14 +23,16 @@ public class OfferDemandService {
 	}
 	
 	public List<OfferDo> getAllOffer(){
-		return this.od.findAll();
+		//return this.od.findAll();
+		return this.od.findByEtatService("VALIDE");
 	}
 	
 	public DemandeDo getOneDemande(Long id) {
 		return this.dd.getOne(id);
 	}
 	public List<DemandeDo> getAllDemande(){
-		return this.dd.findAll();
+		//return this.dd.findAll();
+		return this.dd.findByEtatDemande("VALIDE");
 	}
 	
 	public List<DemandeDo> getAllDemandOneUser(String compteId){
