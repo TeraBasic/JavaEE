@@ -11,10 +11,11 @@
 </head>
 <body>
 <!-- barre de menu -->
-	  # Nom : ${nom} #
-	  -----# Prenom : ${prenom} #
+	  <a># Nom :</a> ${nom} #
+	  <a>-----# Prenom :</a> ${prenom} #
 	  <a href="index" class="btn btn-default">-----# index #</a>
-	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
+	  <a href="notification" class="btn btn-default">-----# Notification #</a>
+	  <a href="logout">Logout</a><br/></p>	
 	<h1>Home</h1>
 	<p>You have already successfully logged in or create compte</p> 
 	

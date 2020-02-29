@@ -10,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.example.demoSQL.domain.AcceptionServiceDo;
 import com.example.demoSQL.domain.DemandeDo;
@@ -66,15 +67,18 @@ public class IndexController {
     @RequestMapping(value="creerCompte", method = RequestMethod.GET)
     public String showRegPage(ModelMap model, HttpSession session){
     	if(session.getAttribute("userId")==null) {
-    		return "reg";	
+    		return "reg";
     	}
     	model.put("id", session.getAttribute("userId"));
         return "home";
     }
     @RequestMapping(value="home", method = RequestMethod.GET)
     public String showHome(ModelMap model, HttpSession session) {
+    	//RedirectView redirectView = new RedirectView();
+        //redirectView.setUrl();
+    	
     	if(session.getAttribute("userId")==null) {
-    		return "login";	
+    		return "redirect:/login";
     	}
     	String userCompte = session.getAttribute("userId").toString();
     	model.put("id", userCompte);
@@ -110,7 +114,7 @@ public class IndexController {
     @RequestMapping(value="notification", method = RequestMethod.GET)
     public String showNotification(ModelMap model, HttpSession session) {
     	if(session.getAttribute("userId")==null) {
-    		return "login";	
+    		return "redirect:/login";	
     	}
     	
     	List<PropositionServiceDo> listPro = conser.getPrositions(session.getAttribute("userId").toString());
