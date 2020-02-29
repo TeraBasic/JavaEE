@@ -7517,3 +7517,18 @@ org.apache.maven.project.ProjectBuildingException: Some problems were encountere
 2020-02-29 22:55:23,436 [Worker-263: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-02-29 22:55:23,439 [Worker-263: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-02-29 22:55:23,439 [Worker-263: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/utilisateur/Documents/Java_EE/demoSQL/src/test/resources
+2020-02-29 23:02:41,545 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:02:41,546 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:02:41,546 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:02:41,549 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:02:41,549 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/utilisateur/Documents/Java_EE/demoSQL/src/test/resources
+2020-02-29 23:02:57,010 [Worker-266: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:02:57,031 [Worker-266: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:02:57,031 [Worker-266: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:02:57,034 [Worker-266: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:02:57,037 [Worker-266: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/utilisateur/Documents/Java_EE/demoSQL/src/test/resources
+2020-02-29 23:03:11,417 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:03:11,418 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:03:11,418 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-29 23:03:11,420 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-29 23:03:11,420 [Worker-268: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/utilisateur/Documents/Java_EE/demoSQL/src/test/resources

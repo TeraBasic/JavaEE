@@ -57,7 +57,7 @@ table, th, td {
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailOffer/${service.offerId}">detail</a>
                     </td>
-                    
+
                 </tr>
             </c:forEach>
         </table>
@@ -84,7 +84,6 @@ table, th, td {
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailDemande/${demand.serviceDemandeId}">detail</a>
                     </td>
-                    
                 </tr>
             </c:forEach>
         </table>
