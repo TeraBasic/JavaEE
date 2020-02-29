@@ -27,6 +27,9 @@ public class DetailPageController {
 	private ContractService contractService;
 	@Autowired
 	private GererCompteService gererCompteService;
+	@Autowired
+	private GererService gererService;
+	
 	
 	@RequestMapping(value="detailDemande/{serviceId}", method = RequestMethod.GET)
 	public String showDetailDemandePage(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
@@ -205,6 +208,23 @@ public class DetailPageController {
 		as.setMessage(message);
 		contractService.stockAcceptionDo(as);
 		return "home";
+	}
+	
+	@RequestMapping(value="supprimeDemande/{serviceId}", method = RequestMethod.GET)
+	public String supprimeDemande(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
+		if(session.getAttribute("userId")==null){
+			return "redirect:/login";
+    	}
+		gererService.supprimeDemande(serviceId);
+		return "supprimeService";
+	}
+	@RequestMapping(value="supprimeOffer/{serviceId}", method = RequestMethod.GET)
+	public String supprimeOffer(ModelMap model, HttpSession session, @PathVariable("serviceId") Long serviceId){
+		if(session.getAttribute("userId")==null){
+			return "redirect:/login";
+    	}
+		gererService.supprimeOffer(serviceId);
+		return "supprimeService";
 	}
 	
 }
