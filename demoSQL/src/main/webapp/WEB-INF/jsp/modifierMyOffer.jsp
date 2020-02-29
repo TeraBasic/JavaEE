@@ -5,8 +5,7 @@
 </head>
 <body>
 <!-- barre de menu -->
-	  # Nom : ${nom} #
-	  -----# Prenom : ${prenom} #
+	 
 	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
 	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
 	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	
@@ -25,7 +24,10 @@
         description : <input type="text" name="description" value = "${offer.description}"/><br>
         description detail: <input type="text" name="descriptionDetail" value = "${offer.descriptionDetail}"/><br>
         localisation de service :<input type="text" name="localisationService" value = "${offer.localisationService}" /><br>
-        etat offer: <input type="text" name="etatService" value = "${offer.etatService}" /><br>
+        Etat offer: <select name="etatService" value = "${offer.etatService}">
+	         				 <option value ="a_valide">A_VALIDER</option>
+  			 				 <option value ="valide">VALIDE</option>
+			 				 </select><br>
         <input type="submit" value = "Submit modification"/><br>
     </form>
     </center>

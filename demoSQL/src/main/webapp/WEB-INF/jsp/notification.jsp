@@ -10,11 +10,9 @@
 </head>
 <body>
 <!-- barre de menu -->
-	  # Nom : ${nom} #
-	  -----# Prenom : ${prenom} #
-	  <a href="index" class="btn btn-default">-----# index #</a>
-	  <a href="home" class="btn btn-default">-----# Home #</a>
-	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
+	  
+	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/home" class="btn btn-default">-----# Home #</a>
 <h2>Notification</h2>
 <div class="body_notification">
     <div class="container">
