@@ -57,9 +57,6 @@ table, th, td {
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailOffer/${service.offerId}">detail</a>
                     </td>
-                    <td>
-                    	<a href="javascript:void(0)" onclick="delete_offer(${service.offerId})">supprimer</a>
-                    </td>
                 </tr>
             </c:forEach>
         </table>
@@ -86,28 +83,10 @@ table, th, td {
                     <td>
                     	<a href="${pageContext.request.contextPath}/detailDemande/${demand.serviceDemandeId}">detail</a>
                     </td>
-                    <td>
-                    	<a href="javascript:void(0)" onclick="delete_demande(${demand.serviceDemandeId})">supprimer</a>
-                    </td>
                 </tr>
             </c:forEach>
         </table>
     </div>
 </div>
 </body>
-<script>
-	function delete_demande(service_id){
-		var r = confirm("Voulez vous vraiment supprimer ?");
-		if (r == true) {
-			window.location.href="${pageContext.request.contextPath}/supprimeDemande/"+service_id;
-		}
-	}
-	function delete_offer(service_id){
-		var r = confirm("Voulez vous vraiment supprimer ?");
-		if (r == true) {
-			window.location.href="${pageContext.request.contextPath}/supprimeOffer/"+service_id;
-		}
-	}
-	
-</script>
 </html>
