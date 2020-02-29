@@ -16,6 +16,8 @@
     <p> Welcome ${compteId}!! </p>
     <p>Veuillez saisir les informations que vous souhaitez modifier : </p>
 	<form action= "modifierOfferSuccess" method="post">
+		id offer : <input type="text" name="offerId" value = "${offer.offerId}" /><br>
+		compte id: <input type="text" name="compteId" value = "${offer.compteId}" /><br>
         nom de service : <input type="text" name="nomService" value = "${offer.nomService}" /><br>
         type de service: <input type="text" name="typeService" value = "${offer.typeService}"/><br>
         nature de service : <input type="text" name="natureService" value = "${offer.natureService}"/><br>
@@ -23,6 +25,7 @@
         description : <input type="text" name="description" value = "${offer.description}"/><br>
         description detail: <input type="text" name="descriptionDetail" value = "${offer.descriptionDetail}"/><br>
         localisation de service :<input type="text" name="localisationService" value = "${offer.localisationService}" /><br>
+        etat offer: <input type="text" name="etatService" value = "${offer.etatService}" /><br>
         <input type="submit" value = "Submit modification"/><br>
     </form>
     </center>

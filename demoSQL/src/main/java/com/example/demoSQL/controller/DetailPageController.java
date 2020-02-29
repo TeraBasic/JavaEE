@@ -85,11 +85,9 @@ public class DetailPageController {
 		return "modifierMyDemande";
 	}
 	
-	//没改完
-	@RequestMapping(value="modifierMyOffer/{offerId}/{compteId}", method = RequestMethod.POST)
-	public String modifierMyOfferPage(ModelMap model, HttpSession session, @PathVariable("offerId") Long offerId, @PathVariable("compteId") String compte,
-			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
-			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
+	
+	@RequestMapping(value="modifierMyOffer/{offerId}", method = RequestMethod.GET)
+	public String modifierMyOfferPage(ModelMap model, HttpSession session, @PathVariable("offerId") Long offerId){
 		//model.put("id", serviceId);
 		
 		OfferDo o = this.offerDemandService.getOneOffer(offerId);
@@ -100,10 +98,16 @@ public class DetailPageController {
 	
 	@RequestMapping(value="modifierMyOffer/modifierOfferSuccess", method = RequestMethod.POST)
 	public String modifierMyOffer(ModelMap model, HttpSession session, 
+			@RequestParam  Long offerId,
+			@RequestParam String compteId,
+			@RequestParam String etatService,
 			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidOffert,
 			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
 		//model.put("id", serviceId);
 		OfferDo od = new OfferDo();
+		od.setOfferId(offerId);
+		od.setCompteId(compteId);
+		od.setEtatService(etatService);
 		od.setTypeService(typeService);
 		od.setNomService(nomService);
 		od.setNatureService(natureService);
@@ -118,10 +122,16 @@ public class DetailPageController {
 	
 	@RequestMapping(value="modifierMyDemande/modifierDemandeSuccess", method = RequestMethod.POST)
 	public String modifierMyDemande(ModelMap model, HttpSession session, 
+			@RequestParam  Long serviceDemandeId,
+			@RequestParam String compteId,
+			@RequestParam String etatService,
 			@RequestParam String typeService,@RequestParam String nomService,@RequestParam String natureService,@RequestParam Date dateValidDemande,
 			@RequestParam String description,@RequestParam String descriptionDetail,@RequestParam String localisationService){
 		//model.put("id", serviceId);
 		DemandeDo dd = new DemandeDo();
+		dd.setServiceDemandeId(serviceDemandeId);
+		dd.setCompteId(compteId);
+		dd.setEtatService(etatService);
 		dd.setTypeService(typeService);
 		dd.setnomService(nomService);
 		dd.setNatureService(natureService);

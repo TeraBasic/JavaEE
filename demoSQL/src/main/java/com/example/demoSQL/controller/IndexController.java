@@ -45,7 +45,7 @@ public class IndexController {
     		return "login";	
     	}
     	model.put("id", session.getAttribute("userId"));
-        return "home";
+        return "redirect:/home";
     }
 
     @RequestMapping(value="login", method = RequestMethod.POST)
@@ -61,7 +61,7 @@ public class IndexController {
         model.put("username", id);
         model.put("password", password);
 
-        return "home";
+        return "redirect:/home";
     }
     
     @RequestMapping(value="creerCompte", method = RequestMethod.GET)
