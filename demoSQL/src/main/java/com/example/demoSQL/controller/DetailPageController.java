@@ -80,10 +80,11 @@ public class DetailPageController {
 	
 	@RequestMapping(value="modifierMyDemande/{demandeId}", method = RequestMethod.GET)
 	public String modifierMyDemandePage(ModelMap model, HttpSession session, @PathVariable("demandeId") Long demandeId){
-		//model.put("id", serviceId);
-		
 		DemandeDo d = this.offerDemandService.getOneDemande(demandeId);
 		model.put("demande", d);
+		String userType = this.offerDemandService.getUserType(session.getAttribute("userId").toString());
+		model.put("userType", userType);
+		System.out.println(userType);
 		//model.put("demandeId", demandeId);
 		return "modifierMyDemande";
 	}
@@ -95,6 +96,9 @@ public class DetailPageController {
 		
 		OfferDo o = this.offerDemandService.getOneOffer(offerId);
 		model.put("offer", o);
+		String userType = this.offerDemandService.getUserType(session.getAttribute("userId").toString());
+		model.put("userType", userType);
+		System.out.println(userType);
 		//model.put("offerId", offerId);
 		return "modifierMyOffer";
 	}

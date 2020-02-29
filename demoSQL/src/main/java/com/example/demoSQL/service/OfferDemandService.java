@@ -57,5 +57,9 @@ public class OfferDemandService {
 	public void updateDemande(DemandeDo dd) {
 		this.dd.saveAndFlush(dd);
 	}
+	
+	public String getUserType(String id) {
+		return ud.getOne(id).getUserType();
+	}
 
 }
