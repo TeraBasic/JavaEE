@@ -177,6 +177,9 @@ public class DetailPageController {
 		ps.setDemandCompte(demandeCompte);
 		ps.setProposeCompte(proposeCompte);
 		ps.setMessage(message);
+		DemandeDo dd = offerDemandService.getOneDemande(serviceDemandeId);
+		dd.setEtatService("EN_COURS");
+		this.offerDemandService.updateDemande(dd);
 		contractService.stockPsDo(ps);
 		return "home";
 	}
@@ -210,6 +213,9 @@ public class DetailPageController {
 		as.setCompteId(compteId);
 		as.setAcceptCompte(acceptCompte);
 		as.setMessage(message);
+		OfferDo od = this.offerDemandService.getOneOffer(offerId);
+		od.setEtatService("EN_COURS");
+		this.offerDemandService.updateOffer(od);
 		contractService.stockAcceptionDo(as);
 		return "home";
 	}

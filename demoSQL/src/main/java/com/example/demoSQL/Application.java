@@ -1,10 +1,14 @@
 package com.example.demoSQL;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +20,16 @@ import com.example.demoSQL.service.UserDao;
 
 @SpringBootApplication
 @RestController
+@EnableScheduling
 @ServletComponentScan
 public class Application {
 	@Autowired
     private UserDao userDao;
 	@Autowired
 	private OfferDao serviceDao;
-	
+
 	public static void main(String[] args) {
+		
 		SpringApplication.run(Application.class, args);
 	}
 	
@@ -116,5 +122,13 @@ public class Application {
 	public String login2(@PathVariable String id) {
 		userDao.deleteById(id);
 		return "user "+id+" has been deleted";
-	}	
+	}
+	
+	private boolean checkTime() {
+		String currentTime = new SimpleDateFormat("HH:mm").format(new Date(0));
+		String timeToCompare = "23:59";
+		return currentTime.equals(timeToCompare);
+	}
+	
+	
 }
