@@ -26,7 +26,7 @@
         description detail: <input type="text" name="descriptionDetail" value = "${offer.descriptionDetail}"/><br>
         localisation de service :<input type="text" name="localisationService" value = "${offer.localisationService}" /><br>
         <c:choose> 
-			  <c:when test="${userType.equals('Administrateur')}">
+			  <c:when test="${userType.equals("Administrateur")}">
 			    Etat offer: <select name="etatService" value = "${offer.etatService}">
 	         				 <option value ="a_valide">A_VALIDER</option>
   			 				 <option value ="valide">VALIDE</option>
