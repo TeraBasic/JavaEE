@@ -44,7 +44,7 @@ public class Application {
 		userDo.setAdresse("46 desborde valmeir");
 		userDo.setDescription("etudiant daupohie");
 		userDo.setPassword("1442424");
-		userDo.setUserType("administrateur");
+		userDo.setUserType("Administrateur");
         userDao.save(userDo);
         
         userDo = new UserDo();
@@ -56,7 +56,7 @@ public class Application {
 		userDo.setAdresse("la defenfes");
 		userDo.setDescription("hehhehehe");
 		userDo.setPassword("123456");
-		userDo.setUserType("administrateur");
+		userDo.setUserType("Administrateur");
         userDao.save(userDo);
         
         userDo = new UserDo();
@@ -68,10 +68,10 @@ public class Application {
 		userDo.setAdresse("la france terre");
 		userDo.setDescription("meieihehee");
 		userDo.setPassword("88888");
-		userDo.setUserType("administrateur");
+		userDo.setUserType("Administrateur");
         userDao.save(userDo);
 		
-        return "user has already added";
+        return "administrateur has already added";
    } 
 	@RequestMapping(value = "/service")
 	public String creatServiceP() {
