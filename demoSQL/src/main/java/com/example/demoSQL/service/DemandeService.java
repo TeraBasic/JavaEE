@@ -55,12 +55,12 @@ public class DemandeService {
 		
 		
 		Date date=Date.valueOf(dateString);
-		// check if the date is after today
+		// check if the date is before today
 		long millis=System.currentTimeMillis();
 		java.sql.Date currentDate=new java.sql.Date(millis);
 		
-		if(currentDate.compareTo(date) < 0) {
-	         System.out.println("Date 1 occurs after Date 2");
+		if(currentDate.compareTo(date) >= 0) {
+	         System.out.println("Date 1 occurs before Date 2");
 	         flagDate = false;
 	    }
 
