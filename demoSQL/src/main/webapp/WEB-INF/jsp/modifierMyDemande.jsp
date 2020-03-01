@@ -15,7 +15,7 @@
     <p> Modifier Demande </p>
     <p> Welcome ${demande.compteId}!! </p>
     <p>Veuillez saisir les informations que vous souhaitez modifier : </p>
-	<form action= "modifierDemandeSuccess" method="post">
+	<form id="form" action= "modifierDemandeSuccess" method="post">
 		Id Demande: <input type="text" name="serviceDemandeId" value = "${demande.serviceDemandeId}" readonly="readonly"/><br>
 		Compte utilisateur: <input type="text" name="compteId" value = "${demande.compteId}" readonly="readonly" /><br>
         nom de service : <input type="text" name="nomService" value = "${demande.nomService}" /><br>
@@ -37,8 +37,16 @@
 			    Etat offer: <input type="text" name="etatService" value = "${demande.etatService}" readonly="readonly"/><br>
 			  </c:otherwise>
 		</c:choose>
-        <input type="submit" value = "Submit modification"/><br>
+        <input type="button" onclick="submit_confirm()" value = "Submit modification"/><br>
     </form>
     </center>
+    <script>
+    	function submit_confirm(){
+    		var gnl=confirm("voulez-vous confirmer? ");
+    		if (gnl==true){
+    			document.getElementById("form").submit();
+    		}
+    	}
+    </script>
 </body>
 </html>

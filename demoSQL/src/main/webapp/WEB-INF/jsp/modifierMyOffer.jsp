@@ -15,7 +15,7 @@
     <p> Modifier Offer </p>
     <p> Welcome ${offer.compteId}!! </p>
     <p>Veuillez saisir les informations que vous souhaitez modifier : </p>
-	<form action= "modifierOfferSuccess" method="post">
+	<form id="form" action= "modifierOfferSuccess" method="post">
 		id offer : <input type="text" name="offerId" value = "${offer.offerId}" readonly="readonly" /><br>
 		compte id: <input type="text" name="compteId" value = "${offer.compteId}" readonly="readonly"/><br>
         nom de service : <input type="text" name="nomService" value = "${offer.nomService}" /><br>
@@ -26,7 +26,7 @@
         description detail: <input type="text" name="descriptionDetail" value = "${offer.descriptionDetail}"/><br>
         localisation de service :<input type="text" name="localisationService" value = "${offer.localisationService}" /><br>
         <c:choose> 
-			  <c:when test="${userType.equals("Administrateur")}">
+			  <c:when test="${userType.equals('Administrateur')}">
 			    Etat offer: <select name="etatService" value = "${offer.etatService}">
 	         				 <option value ="a_valide">A_VALIDER</option>
   			 				 <option value ="valide">VALIDE</option>
@@ -38,8 +38,16 @@
 		</c:choose>
         
         
-        <input type="submit" value = "Submit modification"/><br>
+        <input type="button" onclick="submit_confirm()" value = "Submit modification"/><br>
     </form>
     </center>
+    <script>
+    	function submit_confirm(){
+    		var gnl=confirm("voulez-vous confirmer? ");
+    		if (gnl==true){
+    			document.getElementById("form").submit();
+    		}
+    	}
+    </script>
 </body>
 </html>
