@@ -15,9 +15,7 @@ table, th, td {
 </head>
 <body style="background-image: none;">
 <!-- barre de menu -->
-	  # Nom : ${nom} #
-	  -----# Prenom : ${prenom} #
-	  <a href="index" class="btn btn-default">-----# index #</a>
+	  <a href="index" class="btn btn-default"># index #</a>
 	  <a href="home" class="btn btn-default">-----# Home #</a>
 	  <a href="notification" class="btn btn-default">-----# Notification #</a>	
 <div class="body_wrap">

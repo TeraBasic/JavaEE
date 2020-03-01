@@ -8,8 +8,8 @@
 </head>
 <body>
 <!-- barre de menu -->
-	  # Nom : ${nom} #
-	  -----# Prenom : ${prenom} #
+# Nom : ${user.nom} #
+	  -----# Prenom : ${user.prenom} #
 	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
 	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
 	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	

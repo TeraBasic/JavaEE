@@ -4,7 +4,7 @@
 </head>
 <body>
 <!-- barre de menu -->
-<a href="index" class="btn btn-default"># index #</a>
+<a href="${pageContext.request.contextPath}/index"># index #</a>
 	  	
     <font color="red">${errorMessage}</font>
     <h2>Creer un compte</h2>

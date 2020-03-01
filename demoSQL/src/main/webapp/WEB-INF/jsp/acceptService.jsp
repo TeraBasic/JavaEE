@@ -3,10 +3,15 @@
 <meta charset="UTF-8">
 <title>Accept Service</title>
 </head>
-<body>  
+<body> 
+<!-- barre de menu -->
+	 
+	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default"># index #</a>
+	  <a href="${pageContext.request.contextPath}/home" class="btn btn-default">-----# Home #</a>
+	  <a href="${pageContext.request.contextPath}/notification" class="btn btn-default">-----# Notification #</a>	 
 	<center>
     <h1> Accept Service </h1>
-    <p> Welcome ${compteId}!! </p>
+    <p> Welcome ${acceptCompte}!! </p>
 	<form action= "acceptService" method="post">
         Offer ID : <input type="text" name="offerId" value = "${offerId}"><br>
         Offer Compte: <input type="text" name="compteId" value = "${compteId}"><br>
