@@ -12,8 +12,8 @@
 <body>
 <!-- barre de menu -->
 	 
-	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default">-----# Index #</a>
-	  <a href="${pageContext.request.contextPath}/notification" class="btn btn-default">-----# Notification #</a>
+	  <a href="${pageContext.request.contextPath}/index"># index #</a>
+	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>
 	  <a href="logout">-----# Logout #</a><br/></p>	
 	<h1>Home</h1>
 	<p>You have already successfully logged in or create compte</p> 

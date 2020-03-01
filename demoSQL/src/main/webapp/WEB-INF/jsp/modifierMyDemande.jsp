@@ -7,13 +7,13 @@
 <body>
 <!-- barre de menu -->
 	 
-	  <a href="${pageContext.request.contextPath}/index">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/index"># index #</a>
 	  <a href="${pageContext.request.contextPath}/home">-----# Home #</a>
 	  <a href="${pageContext.request.contextPath}/notification">-----# Notification #</a>	
 	<center>
 	<font color="red">${errorMessage}</font>
     <p> Modifier Demande </p>
-    <p> Welcome ${compteId}!! </p>
+    <p> Welcome ${demande.compteId}!! </p>
     <p>Veuillez saisir les informations que vous souhaitez modifier : </p>
 	<form action= "modifierDemandeSuccess" method="post">
 		Id Demande: <input type="text" name="serviceDemandeId" value = "${demande.serviceDemandeId}" readonly="readonly"/><br>

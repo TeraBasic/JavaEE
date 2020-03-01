@@ -11,7 +11,7 @@
 <body>
 <!-- barre de menu -->
 	  
-	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default">-----# index #</a>
+	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default"># index #</a>
 	  <a href="${pageContext.request.contextPath}/home" class="btn btn-default">-----# Home #</a>
 <h2>Notification</h2>
 <div class="body_notification">

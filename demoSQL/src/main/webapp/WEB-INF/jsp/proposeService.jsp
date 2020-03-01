@@ -4,9 +4,15 @@
 <title>Offer Service</title>
 </head>
 <body>
+<!-- barre de menu -->
+	 
+	  <a href="${pageContext.request.contextPath}/index" class="btn btn-default"># index #</a>
+	  <a href="${pageContext.request.contextPath}/home" class="btn btn-default">-----# Home #</a>
+	  <a href="${pageContext.request.contextPath}/notification" class="btn btn-default">-----# Notification #</a>	
 	<center>
-    <p> Offer Service </p>
-    <p> Welcome ${compteId}!! </p>
+    <h1> Offer Service </h1>
+	<p> Welcome ${proposeCompte}!! </p>
+	
 	<form action= "proposeService" method="post">
         Demande ID : <input type="text" name="serviceDemandeId" value = "${serviceId}"><br>
         Demand Compte: <input type="text" name="demandeCompte" value = "${demandeCompte}"><br>
